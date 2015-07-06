@@ -12,8 +12,7 @@ namespace Descent_2e_Co_Op
 	public class Card
 	{
 		#region Fields
-		Texture2D sprite;
-		Rectangle drawRectangle;
+        Rectangle drawRectangle, sourceRectangle;
 
 		// Search Card Values
 		string name; int value;
@@ -25,8 +24,7 @@ namespace Descent_2e_Co_Op
 
         // Shop Card Values
         string type = "", trait = "", bonus1 = "", bonus2 = "", surge1 = "", surge2 = "", surge3="";
-        Dice attackDie1, attackDie2, attackDie3, defenseDie1, defenseDie2;
-        int numOfHands = 1;
+        int attackDie1, attackDie2, attackDie3, defenseDie1, defenseDie2, numOfHands = 1;
 
 
 		#region Constructors
@@ -37,11 +35,11 @@ namespace Descent_2e_Co_Op
 		/// <param name="spriteName">Name of the sprite to draw</param>
 		/// <param name="name">Name of search card</param>
 		/// <param name="value">Value of search card</param>
-		public Card(ContentManager content, string spriteName, string name, int value)
+		public Card(string name, int value, Rectangle source)
 		{
+            sourceRectangle = source;
 			this.name = name; this.value = value;
-			sprite = content.Load<Texture2D>(spriteName);
-			drawRectangle = new Rectangle(GameConstants.HALF_WINDOW_WIDTH() - sprite.Width, GameConstants.HALF_WINDOW_HEIGHT() - sprite.Height, sprite.Width, sprite.Height);
+            drawRectangle = new Rectangle(GameConstants.HALF_WINDOW_WIDTH() - source.Width, GameConstants.HALF_WINDOW_HEIGHT() - source.Height, source.Width, source.Height);
 		}
 
 		/// <summary>
@@ -54,10 +52,10 @@ namespace Descent_2e_Co_Op
 		/// <param name="emptyCondition">Condition to effect heroes in empty room</param>
 		/// <param name="monsterFlavorText">Flavor text when monsters in room</param>
 		/// <param name="monsterCondition">Condition to effect heroes when monsters present</param>
-		public Card(ContentManager content, string spriteName, bool hasMonsterSide, string emptyFlavorText, string emptyCondition, string monsterFlavorText, string monsterCondition)
+		public Card(bool hasMonsterSide, string emptyFlavorText, string emptyCondition, string monsterFlavorText, string monsterCondition, Rectangle source)
         {
-            this.sprite = content.Load<Texture2D>(spriteName);
-            drawRectangle = new Rectangle(GameConstants.HALF_WINDOW_WIDTH() - sprite.Width, GameConstants.HALF_WINDOW_HEIGHT() - sprite.Height, sprite.Width, sprite.Height);
+            sourceRectangle = source;
+            drawRectangle = new Rectangle(GameConstants.HALF_WINDOW_WIDTH() - source.Width, GameConstants.HALF_WINDOW_HEIGHT() - source.Height, source.Width, source.Height);
             if (hasMonsterSide)
             {
                 this.monsterFlavorText = monsterFlavorText;
@@ -87,41 +85,43 @@ namespace Descent_2e_Co_Op
         /// <param name="die3">Attack die color 3: blue 0, red 1, yellow 2</param>
         /// <param name="def1">Defense die color 1: brown 3, gray 4, black 5</param>
         /// <param name="def2">Defense die color 2: brown 3, gray 4, black 5</param>
-        public Card(ContentManager content, string spriteName, string name, string type, string trait, string bonus1, string bonus2, string surge1, string surge2, string surge3,
+        public Card(Rectangle source, string name, string type, string trait, string bonus1, string bonus2, string surge1, string surge2, string surge3,
                     int numbOfHands, int die1, int die2, int die3, int def1, int def2)
         {
-            this.sprite = content.Load<Texture2D>(spriteName);
+            sourceRectangle = source;
             this.name = name; this.type = type; this.trait = trait; this.bonus1 = bonus1; this.bonus2 = bonus2; this.surge1 = surge1; this.surge2 = surge2; this.surge3 = surge3;
-            this.numOfHands = numbOfHands; attackDie1 = new Dice(die1); attackDie2 = new Dice(die2); attackDie3 = new Dice(die3); defenseDie1 = new Dice(def1); defenseDie2 = new Dice(def2);
+            this.numOfHands = numbOfHands; attackDie1 = die1; attackDie2 = die2; attackDie3 = die3; defenseDie1 = def1; defenseDie2 = def2;
         }
 		#endregion
 
 		#region Properties
-		public Rectangle DrawRectangle { get { return drawRectangle; } }
+        public Rectangle DrawRectangle { get { return drawRectangle; } set { drawRectangle = value; } }
+        public Rectangle SourceRectangle { get { return sourceRectangle; } }
 		public string Name { get { return name; } }
 		public int Value { get { return value; } }
 		public bool Active { get { return active; } set { active = value; } }
 		public bool HasMonsterSide { get { return hasMonsterSide; } }
 		public string EmptyFlavorText { get { return emptyFlavorText; } }
-
-		public string EmptyCondition
-		{
-			get { return EmptyCondition; }
-		}
-
-		public string MonsterFlavorText
-		{
-			get { return monsterFlavorText; }
-		}
-
-		public string MonsterCondition
-		{
-			get { return monsterCondition; }
-		}
+		public string EmptyCondition { get { return EmptyCondition; } }
+		public string MonsterFlavorText { get { return monsterFlavorText; } }
+		public string MonsterCondition { get { return monsterCondition; } }
+        public string Type { get { return type; } }
+        public string Trait { get { return trait; } }
+        public string Bonus1 { get { return bonus1; } }
+        public string Bonus2 { get { return bonus2; } }
+        public string Surge1 { get { return surge1; } }
+        public string Surge2 { get { return surge2; } }
+        public string Surge3 { get { return surge3; } }
+        public int Attack1 { get { return attackDie1; } }
+        public int Attack2 { get { return attackDie2; } }
+        public int Attack3 { get { return attackDie3; } }
+        public int Defense1 { get { return defenseDie1; } }
+        public int Defense2 { get { return defenseDie2; } }
+        public int NumOfHands { get { return numOfHands; } }
 		#endregion
 
 		#region Public Methods
-		public void Draw(SpriteBatch spriteBatch) { spriteBatch.Draw(sprite, drawRectangle, Color.White); }
+		public void Draw(SpriteBatch spriteBatch, Texture2D sprite) { spriteBatch.Draw(sprite, drawRectangle, sourceRectangle, Color.White); }
 		#endregion
 
 		#region Private Methods

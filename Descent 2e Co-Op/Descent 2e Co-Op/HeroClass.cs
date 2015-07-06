@@ -100,6 +100,28 @@ namespace Descent_2e_Co_Op
 			searchCards.Add(searchCard);
 		}
 
+        public void AddToBackPack(Card shopCard)
+        {
+            if (shopCard.Type == "melee" || shopCard.Type == "range")
+            {
+                backPack.Add(new Equipment(shopCard.SourceRectangle, shopCard.Name, shopCard.Type, shopCard.Trait, "", shopCard.Bonus1, shopCard.Surge1, shopCard.Surge2, shopCard.Surge3, 0, shopCard.NumOfHands,
+                    shopCard.Attack1, shopCard.Attack2, shopCard.Attack3));
+                if (shopCard.Bonus2 != "") backPack[backPack.Count].Bonus2 = shopCard.Bonus2;
+            }
+            else if (shopCard.Type == "armor")
+            {
+                backPack.Add(new Equipment(shopCard.SourceRectangle, shopCard.Name, shopCard.Trait, shopCard.Bonus1, shopCard.Bonus2, shopCard.Defense1));
+            }
+            else if (shopCard.Type == "trinket")
+            {
+                backPack.Add(new Equipment(shopCard.SourceRectangle, shopCard.Name, shopCard.Bonus1, shopCard.Bonus2));
+            }
+            else if (shopCard.Type == "shield")
+            {
+                backPack.Add(new Equipment(shopCard.SourceRectangle, shopCard.Name, shopCard.Bonus1));
+            }
+        }
+
 		public void AddNewWeapon(ContentManager content, Equipment weaponCard, string handPosition)
 		{
 			if (handPosition == "main")
@@ -163,63 +185,63 @@ namespace Descent_2e_Co_Op
                     currentWeapon.EquipmentSpriteRect = new Rectangle(0, 0, 128, 192);
                     offHand = GameConstants.DISCIPLE_SHIELD;
                     offHand.EquipmentSpriteRect = new Rectangle(128, 0, 128, 192);
-                    xPos = 384; yPos = 0;
-                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; if (xPos > 896) { xPos = 0; yPos += 192; } }
+                    xPos = 256; yPos = 0;
+                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; }
                     skillList.Add(new Token(startingSkillRect, 0, xLoc, yLoc, new Rectangle(256, 0, 128, 192)));
                     break;
                 case "spirit speaker": 
                     currentWeapon = GameConstants.SPIRIT_SPEAKER_WEAPON;
-                    currentWeapon.EquipmentSpriteRect = new Rectangle(384, 192, 128, 192);
-                    xPos = 640; yPos = 192;
-                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; if (xPos > 896) { xPos = 0; yPos += 192; } }
+                    currentWeapon.EquipmentSpriteRect = new Rectangle(0, 192, 128, 192);
+                    xPos = 128; yPos = 192;
+                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; }
                     skillList.Add(new Token(startingSkillRect, 0, xLoc, yLoc, new Rectangle(512, 192, 128, 192)));
                     break;
                 case "necromancer": 
                     currentWeapon = GameConstants.NECROMANCER_WEAPON;
-                    currentWeapon.EquipmentSpriteRect = new Rectangle(640, 384, 128, 192);
-                    xPos = 0; yPos = 576;
-                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; if (xPos > 896) { xPos = 0; yPos += 192; } }
+                    currentWeapon.EquipmentSpriteRect = new Rectangle(0, 384, 128, 192);
+                    xPos = 384; yPos = 384;
+                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; }
                     skillList.Add(new Token(startingSkillRect, 0, xLoc, yLoc, new Rectangle(768, 384, 128, 192)));
-                    skillList.Add(new Token(startingSkillRect, 0, xLoc + GameConstants.MAIN_SKILL_BUFFER_X, yLoc, new Rectangle(896, 384, 128, 192)));
+                    skillList.Add(new Token(startingSkillRect, -1, xLoc + GameConstants.MAIN_SKILL_BUFFER_X, yLoc, new Rectangle(256, 384, 128, 192)));
                     break;
                 case "runemaster": 
                     currentWeapon = GameConstants.RUNEMASTER_WEAPON;
-                    currentWeapon.EquipmentSpriteRect = new Rectangle(0, 0, 128, 192);
-                    xPos = 256; yPos = 0;
-                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; if (xPos > 896) { xPos = 0; yPos += 192; } }
+                    currentWeapon.EquipmentSpriteRect = new Rectangle(0, 576, 128, 192);
+                    xPos = 128; yPos = 576;
+                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; }
                     skillList.Add(new Token(startingSkillRect, 0, xLoc, yLoc, new Rectangle(128, 0, 128, 192)));
                     break;
                 case "thief": 
                     currentWeapon = GameConstants.THIEF_WEAPON;
-                    currentWeapon.EquipmentSpriteRect = new Rectangle(256, 192, 128, 192);
+                    currentWeapon.EquipmentSpriteRect = new Rectangle(0, 0, 128, 192);
                     trinket1 = GameConstants.THIEF_TRINKET;
-                    trinket1.EquipmentSpriteRect = new Rectangle(384, 192, 128, 192);
+                    trinket1.EquipmentSpriteRect = new Rectangle(128, 0, 128, 192);
                     numOfTrinketsUsed++;
-                    xPos = 640; yPos = 192;
-                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; if (xPos > 896) { xPos = 0; yPos += 192; } }
+                    xPos = 256; yPos = 0;
+                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; }
                     skillList.Add(new Token(startingSkillRect, 0, xLoc, yLoc, new Rectangle(512, 192, 128, 192)));
                     break;
                 case "wildlander": 
                     currentWeapon = GameConstants.WILDLANDER_WEAPON;
-                    currentWeapon.EquipmentSpriteRect = new Rectangle(640, 384, 128, 192);
-                    xPos = 896; yPos = 384;
-                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; if (xPos > 896) { xPos = 0; yPos += 192; } }
+                    currentWeapon.EquipmentSpriteRect = new Rectangle(0, 192, 128, 192);
+                    xPos = 128; yPos = 192;
+                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; }
                     skillList.Add(new Token(startingSkillRect, 0, xLoc, yLoc, new Rectangle(768, 384, 128, 192)));
                     break;
                 case "berserker": 
                     currentWeapon = GameConstants.BERSERKER_WEAPON;
-                    currentWeapon.EquipmentSpriteRect = new Rectangle(0, 0, 128, 192);
-                    xPos = 256; yPos = 0;
-                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; if (xPos > 896) { xPos = 0; yPos += 192; } }
+                    currentWeapon.EquipmentSpriteRect = new Rectangle(0, 384, 128, 192);
+                    xPos = 128; yPos = 384;
+                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; }
                     skillList.Add(new Token(startingSkillRect, 0, xLoc, yLoc, new Rectangle(128, 0, 128, 192)));
                     break;
                 case "knight": 
                     currentWeapon = GameConstants.KNIGHT_WEAPON;
-                    currentWeapon.EquipmentSpriteRect = new Rectangle(256, 192, 128, 192);
+                    currentWeapon.EquipmentSpriteRect = new Rectangle(0, 576, 128, 192);
                     offHand = GameConstants.KNIGHT_SHIELD;
-                    offHand.EquipmentSpriteRect = new Rectangle(384, 192, 128, 192);
-                    xPos = 640; yPos = 192;
-                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; if (xPos > 896) { xPos = 0; yPos += 192; } }
+                    offHand.EquipmentSpriteRect = new Rectangle(128, 576, 128, 192);
+                    xPos = 256; yPos = 576;
+                    for (int x = 1; x <= 8; x++) { skillSpriteSourceRect[x - 1] = new Rectangle(xPos, yPos, 128, 192); xPos += 128; }
                     skillList.Add(new Token(startingSkillRect, 0, xLoc, yLoc, new Rectangle(512, 192, 128, 192)));
                     break;
                 default: break;

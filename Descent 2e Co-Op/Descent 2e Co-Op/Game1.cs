@@ -37,7 +37,7 @@ namespace Descent_2e_Co_Op
         double mFadeDelay = 0.015;
 
         // Sprite Sheets
-        Texture2D spriteSheet1, classSheet1, classSheet2, classSheet3, heroSheet1, heroSheet2;
+        Texture2D spriteSheet1, classSheet1, classSheet2, heroSheet1, heroSheet2, shopSheet;
 
         // HP/Stam bar items
         Rectangle barBGSource, hpBarSource, stamBarSource,
@@ -65,6 +65,7 @@ namespace Descent_2e_Co_Op
 		List<Dice> defenseDiceList = new List<Dice>();
         List<string> surgeList = new List<string>();
         List<Token> testing = new List<Token>();
+        List<Card> awardedShopCards = new List<Card>();
         Deck searchDeck, perilDeck, shop1Deck, shop2Deck;
         //monsterActivationDeck, 
 
@@ -78,7 +79,7 @@ namespace Descent_2e_Co_Op
 			 barghestFound = false, fleshFound = false, dragonFound = false, zombieFound = false, finishedSelectingHeroes = false, 
 			 createdStep1 = false, loadOnce = false, loadSurgeOnce = false, heroMoving = false, searchTokenClicked = false, searchedOnce = false, weaponPicked = false,
 			 calcAttack = true, attackHit = true, hasSurges = false, skillPicked = false, familiarActive = false, familiarActed = false, familiarAttacked = false, familiarMoved = false, 
-             familiarChoosing = true, familiarActionSheetOn = true, usedSkillOnce = false, LoSFound = false, skillNotExhausted = false;
+             familiarChoosing = true, familiarActionSheetOn = true, usedSkillOnce = false, LoSFound = false, skillNotExhausted = false, awardingLoot = false;
 
         string currentRoom = "19B", selectedHeroName = "", weaponUsed = "", familiarAction ="", theClassName = "";
         int numHeroTurns = 2, numHeroesPlaying = 2, creatingHeroNumber = 1, currentHeroTurn = 1, numOfHealers = 0, numOfMages = 0, numOfScouts = 0, numOfWarriors = 0, attackRange = 0, heroNumPosition = -1,
@@ -179,8 +180,9 @@ namespace Descent_2e_Co_Op
             // Loading background image
             endToken = new Token(new Rectangle(0, 0, GameConstants.WINDOW_WIDTH, GameConstants.WINDOW_HEIGHT), 0, GameConstants.WINDOW_WIDTH - 200, 50, new Rectangle(768, 712, 150, 64));
             background = Content.Load<Texture2D>("Misc/dirt bg");
-            spriteSheet1 = Content.Load<Texture2D>("sprite sheet 1"); classSheet1 = Content.Load<Texture2D>("Classes/class sheet 1"); classSheet2 = Content.Load<Texture2D>("Classes/class sheet 2"); classSheet3 = Content.Load<Texture2D>("Classes/class sheet 3");
+            spriteSheet1 = Content.Load<Texture2D>("sprite sheet 1"); classSheet1 = Content.Load<Texture2D>("Classes/class sheet 1"); classSheet2 = Content.Load<Texture2D>("Classes/class sheet 2");
             heroSheet1 = Content.Load<Texture2D>("Hero_Items/hero sheets 1"); heroSheet2 = Content.Load<Texture2D>("Hero_Items/hero sheets 2");
+            shopSheet = Content.Load<Texture2D>("shop sheet");
             barBGSource = new Rectangle(0, 996, 246, 28); hpBarSource = new Rectangle(0, 972, 244, 24); stamBarSource = new Rectangle(0, 948, 244, 24);
             bar1BGLocation = new Rectangle(GameConstants.HALF_WINDOW_WIDTH() - 411, GameConstants.WINDOW_HEIGHT - 225, 246, 28);
             hpBarLocation = new Rectangle(GameConstants.HALF_WINDOW_WIDTH() - 407, GameConstants.WINDOW_HEIGHT - 223, 244, 24);
@@ -195,6 +197,10 @@ namespace Descent_2e_Co_Op
             // Adding Loot track and OL track items to the game
             Texture2D lootSprite = Content.Load<Texture2D>("Misc/Loot Tracker");
             lootTrack = new Tracks(Content, lootSprite, 10, GameConstants.WINDOW_HEIGHT / 2 - lootSprite.Height / 2);
+            // TODO: Set for testing gaining equipment, delete after done testing
+            int xPosition = GameConstants.HP_TOKEN_START_X + lootTrack.DrawRectangle.Height, yPosition = GameConstants.HP_TOKEN_START_Y + lootTrack.DrawRectangle.Height;
+            for (int x = 0; x < 3; x++) lootTrackTokens.Add(new Token(lootTrack.DrawRectangle, lootTrackTokens.Count + 1, GameConstants.HP_TOKEN_START_X, yPosition + (GameConstants.HP_TOKEN_BUFFER_Y * lootTrackTokens.Count), hpTokenSource));
+            //
             staminaTokenSource = new Rectangle(721, 224, 43, 40); hpTokenSource = new Rectangle(721, 264, 40, 36);
             masterMonsterKillToken = new Token(lootTrack.DrawRectangle, 1, lootTrack.DrawRectangle.Width - 110, lootTrack.DrawRectangle.Height - 58, staminaTokenSource);
             Texture2D overlordSprite = Content.Load<Texture2D>("Misc/Overlord Tracker");
@@ -1141,9 +1147,15 @@ namespace Descent_2e_Co_Op
 													{
                                                         weaponPicked = true;
                                                         messages.Clear();
-														messages.Add(new Message(heroSheets[heroNumPosition].Name + " found...", windlassFont23, centerWindowMessage));
-														searchDeck.drawSearchCard(random, heroSheets[heroNumPosition]);
+														messages.Add(new Message(thisHeroSheet.Name + " found...", windlassFont23, centerWindowMessage));
+                                                        searchDeck.pullSearchCard(thisHeroSheet);
 														searchedOnce = true;
+                                                        if (thisHeroSheet.PickedClass.SearchCards[thisHeroSheet.PickedClass.SearchCards.Count - 1].Name == "Treasure Chest")
+                                                        {
+                                                            thisHeroSheet.PickedClass.SearchCards.RemoveAt(thisHeroSheet.PickedClass.SearchCards.Count - 1);
+                                                            if (currentAct == 1) shop1Deck.pullShopCard(thisHeroSheet);
+                                                            else shop2Deck.pullShopCard(thisHeroSheet);
+                                                        }
 													}
 													searchTokenClicked = true;
 													searchCoinIndex = searchCoin.Variable;
@@ -2080,15 +2092,26 @@ namespace Descent_2e_Co_Op
                     lootTrackTokens.Add(new Token(lootTrack.DrawRectangle, lootTrackTokens.Count + 1, GameConstants.HP_TOKEN_START_X, yPosition + (GameConstants.HP_TOKEN_BUFFER_Y * lootTrackTokens.Count), hpTokenSource));
             if (lootTrackTokens.Count > 3)
             {
-                if (lootTrackTokens.Count >= 4 && numHeroesPlaying == 2) AwardShopCard();
-                else if (lootTrackTokens.Count >= 5 && numHeroesPlaying == 3) AwardShopCard();
-                else if (lootTrackTokens.Count >= 6 && numHeroesPlaying == 4) AwardShopCard();
+                if (lootTrackTokens.Count >= 4 && numHeroesPlaying == 2) AwardShopCard(heroSheets[heroNumPosition]);
+                else if (lootTrackTokens.Count >= 5 && numHeroesPlaying == 3) AwardShopCard(heroSheets[heroNumPosition]);
+                else if (lootTrackTokens.Count >= 6 && numHeroesPlaying == 4) AwardShopCard(heroSheets[heroNumPosition]);
             }
         }
 
-        private void AwardShopCard()
+        private void AwardShopCard(HeroSheet hero)
         {
-            throw new NotImplementedException();
+            awardingLoot = true;
+            messages.Clear();
+            messages.Add(new Message("Choose one piece of treasure for the target bounty.", windlassFont23, centerWindowMessage));
+            for (int x = 0; x < masterKillCount; x++)
+            {
+                Rectangle drawRect;
+                if (currentAct == 1) awardedShopCards.Add(shop1Deck.pullShopCard(hero));
+                else awardedShopCards.Add(shop2Deck.pullShopCard(hero));
+                if(x < 5) drawRect =  new Rectangle(creationRec.X + 25 + (x * 138), creationRec.Y + 100, 128, 192);
+                else drawRect = new Rectangle(creationRec.X + 25 + ((x - 5) * 138), creationRec.Y + 302, 128, 192);
+                awardedShopCards[awardedShopCards.Count - 1].DrawRectangle = drawRect;
+            }
         }
 
         /// <summary>
@@ -2110,12 +2133,9 @@ namespace Descent_2e_Co_Op
             foreach (HeroSheet hSheet in heroSheets)
                 if (hSheet.ActiveSheet)
                 {
-                    if (hSheet.Name == "Ashrian" || hSheet.Name == "Avric" || hSheet.Name == "Leoric" || hSheet.Name == "Tarha")
-                        if (hSheet.PickedClass.ClassName != "runemaster") { hSheet.Draw(spriteBatch, heroSheet1, classSheet1); }
-                        else hSheet.Draw(spriteBatch, heroSheet1, classSheet2);
-                    else
-                        if (hSheet.PickedClass.ClassName == "thief" || hSheet.PickedClass.ClassName == "wildlander") hSheet.Draw(spriteBatch, heroSheet2, classSheet2);
-                        else hSheet.Draw(spriteBatch, heroSheet2, classSheet3);
+                    string theClassName = hSheet.PickedClass.ClassName;
+                    if (theClassName == "disciple" || theClassName == "spirit speaker" || theClassName == "necromancer" || theClassName == "runemaster") { hSheet.Draw(spriteBatch, heroSheet1, classSheet1); }
+                    else hSheet.Draw(spriteBatch, heroSheet1, classSheet2);                    
                     bar1BG.Draw(spriteBatch, spriteSheet1); bar2BG.Draw(spriteBatch, spriteSheet1);
                     int numPos = heroTokens[heroNumPosition].Variable - 1;
                     hpBars[numPos].Draw(spriteBatch, spriteSheet1);
@@ -2144,9 +2164,8 @@ namespace Descent_2e_Co_Op
                         string className = hSheet.PickedClass.ClassName;
                         foreach (Token skillCard in hSheet.PickedClass.AllSkillCards) if (skillCard.Active)
                             {
-                                if (className == "disciple" || className == "spirit speaker" || className == "necromancer") { if (skillCard.Active) skillCard.Draw(spriteBatch, classSheet1); }
-                                else if (className == "runemaster" || className == "thief" || className == "wildlander") { if (skillCard.Active) skillCard.Draw(spriteBatch, classSheet2); }
-                                else if (skillCard.Active) skillCard.Draw(spriteBatch, classSheet3);
+                                if (className == "disciple" || className == "spirit speaker" || className == "necromancer" || className == "runemaster") { if (skillCard.Active) skillCard.Draw(spriteBatch, classSheet1); }
+                                else { if (skillCard.Active)skillCard.Draw(spriteBatch, classSheet2); }
                             }
                     }
                     endToken.Draw(spriteBatch, spriteSheet1);
@@ -2266,12 +2285,23 @@ namespace Descent_2e_Co_Op
 			#region Game Overlays: Monster Info, Drawn Search Card
 			if (monsterTokenClicked) monsterOverlay.Draw(spriteBatch, mAlphaValue);
             if (monsterTokenClicked) foreach (MonsterSheet mSheet in monsterSheet) if (mSheet.Active) mSheet.Draw(spriteBatch, spriteSheet1, mAlphaValue);
+
 			if (searchTokenClicked) monsterOverlay.Draw(spriteBatch, mAlphaValue);
 			if (searchTokenClicked)
 			{
 				int discardSize = searchDeck.DiscardDeck.Count - 1;
-				searchDeck.DiscardDeck[discardSize].Draw(spriteBatch);
+				searchDeck.DiscardDeck[discardSize].Draw(spriteBatch, shopSheet);
+                if (searchDeck.DiscardDeck[discardSize].Name == "Treasure Chest")
+                {
+                    heroSheets[heroNumPosition].PickedClass.BackPack[heroSheets[heroNumPosition].PickedClass.BackPack.Count - 1].Draw(spriteBatch, shopSheet);
+                }
 			}
+
+            if (awardingLoot)
+            {
+                spriteBatch.Draw(creationBG, creationRec, Color.White);
+                foreach (Card lootCard in awardedShopCards) lootCard.Draw(spriteBatch, shopSheet);
+            }
 			#endregion
 
             // TODO: REMOVE AFTER TESTING drawing LoS lines

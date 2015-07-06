@@ -120,17 +120,17 @@ namespace Descent_2e_Co_Op
 
         #region Hero Starting Gear
 
-        public static Equipment DISCIPLE_WEAPON = new Equipment("Iron Mace", "Melee", "Hammer", "", "", "stun", "", "", 50, 1, 0, 2, -1);
-        public static Equipment DISCIPLE_SHIELD = new Equipment("Wooden Shield", 0);
-        public static Equipment SPIRIT_SPEAKER_WEAPON = new Equipment("Oak Staff", "Melee", "Staff", "", "reach", "1dmg", "", "", 50, 2, 0, 2, -1);
-        public static Equipment NECROMANCER_WEAPON = new Equipment("Reaper's Scythe", "Range", "Magic", "Staff", "heal1", "1range", "", "", 50, 2, 0, 2, -1);
-        public static Equipment RUNEMASTER_WEAPON = new Equipment("Arcane Bolt", "Range", "Magic", "Rune", "", "1range", "pierce2", "", 50, 2, 0, 2, -1);
-        public static Equipment THIEF_WEAPON = new Equipment("Throwing Knives", "Range", "Blade", "", "adjacent1dmg", "1range", "", "", 50, 1, 0, 2, -1);
-        public static Equipment THIEF_TRINKET = new Equipment("Lucky Charm", "Reroll Attribute Test", "");
-        public static Equipment WILDLANDER_WEAPON = new Equipment("Yew Shortbow", "Range", "Bow", "", "", "2range", "1dmg", "", 50, 2, 0, 2, -1);
-        public static Equipment BERSERKER_WEAPON = new Equipment("Chipped Greataxe", "Melee", "Axe", "", "", "1dmg", "1dmg", "", 50, 2, 0, 1, -1);
-        public static Equipment KNIGHT_WEAPON = new Equipment("Iron Longsword", "Melee", "Blade", "", "", "rerollDef", "", "", 50, 1, 0, 1, -1);
-        public static Equipment KNIGHT_SHIELD = new Equipment("Wooden Shield", 0);
+        public static Equipment DISCIPLE_WEAPON = new Equipment(new Rectangle(0, 0, 128, 192), "Iron Mace", "Melee", "Hammer", "", "", "stun", "", "", 50, 1, 0, 2, -1);
+        public static Equipment DISCIPLE_SHIELD = new Equipment(new Rectangle(128, 0, 128, 192), "Wooden Shield", "add1def");
+        public static Equipment SPIRIT_SPEAKER_WEAPON = new Equipment(new Rectangle(0, 192, 128, 192), "Oak Staff", "Melee", "Staff", "", "reach", "1dmg", "", "", 50, 2, 0, 2, -1);
+        public static Equipment NECROMANCER_WEAPON = new Equipment(new Rectangle(0, 384, 128, 192), "Reaper's Scythe", "Range", "Magic", "Staff", "heal1", "1range", "", "", 50, 2, 0, 2, -1);
+        public static Equipment RUNEMASTER_WEAPON = new Equipment(new Rectangle(0, 576, 128, 192), "Arcane Bolt", "Range", "Magic", "Rune", "", "1range", "pierce2", "", 50, 2, 0, 2, -1);
+        public static Equipment THIEF_WEAPON = new Equipment(new Rectangle(0, 0, 128, 192), "Throwing Knives", "Range", "Blade", "", "adjacent1dmg", "1range", "", "", 50, 1, 0, 2, -1);
+        public static Equipment THIEF_TRINKET = new Equipment(new Rectangle(128, 0, 128, 192), "Lucky Charm", "Reroll Attribute Test", "");
+        public static Equipment WILDLANDER_WEAPON = new Equipment(new Rectangle(0, 192, 128, 192), "Yew Shortbow", "Range", "Bow", "", "", "2range", "1dmg", "", 50, 2, 0, 2, -1);
+        public static Equipment BERSERKER_WEAPON = new Equipment(new Rectangle(0, 384, 128, 192), "Chipped Greataxe", "Melee", "Axe", "", "", "1dmg", "1dmg", "", 50, 2, 0, 1, -1);
+        public static Equipment KNIGHT_WEAPON = new Equipment(new Rectangle(0, 576, 128, 192), "Iron Longsword", "Melee", "Blade", "", "", "rerollDef", "", "", 50, 1, 0, 1, -1);
+        public static Equipment KNIGHT_SHIELD = new Equipment(new Rectangle(128, 576, 128, 192), "Wooden Shield", "add1def");
 
         #endregion
 
