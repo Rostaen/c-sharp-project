@@ -1,0 +1,130 @@
+Content\Shop 1\Chainmail.xnb
+Content\Shop 1\Crossbow.xnb
+Content\Shop 1\Elm Greatbow.xnb
+Content\Shop 1\Heavy Cloak.xnb
+Content\Shop 1\Immolation.xnb
+Content\Shop 1\Iron Battleaxe.xnb
+Content\Shop 1\Iron Shield 1.xnb
+Content\Shop 1\Iron Shield 2.xnb
+Content\Shop 1\Iron Spear.xnb
+Content\Shop 1\Leather Armor 1.xnb
+Content\Shop 1\Leather Armor 2.xnb
+Content\Shop 1\Light Hammer.xnb
+Content\Shop 1\Lucky Charm.xnb
+Content\Shop 1\Magic Staff.xnb
+Content\Shop 1\Mana Weave.xnb
+Content\Shop 1\Ring of Power.xnb
+Content\Shop 1\Scorpion Helm.xnb
+Content\Shop 1\Sling.xnb
+Content\Shop 1\Steel Broadsword.xnb
+Content\Shop 1\Sunburst.xnb
+Content\Shop 1\Tier One Back.xnb
+Content\Shop 2\Demonhide Leather.xnb
+Content\Shop 2\Dragontooth Hammer.xnb
+Content\Shop 2\Dwarven Firebomb.xnb
+Content\Shop 2\Elven Cloak.xnb
+Content\Shop 2\Grinding Axe.xnb
+Content\Shop 2\Heavy Steel Shield.xnb
+Content\Shop 2\Ice Storm.xnb
+Content\Shop 2\Iron Bound Ring.xnb
+Content\Shop 2\Latari Longbow.xnb
+Content\Shop 2\Lightning Strike.xnb
+Content\Shop 2\Mace of Kellos.xnb
+Content\Shop 2\Platemail.xnb
+Content\Shop 2\Steel Greatsword.xnb
+Content\Shop 2\Tier Two Back.xnb
+Content\Shop 2\Tival Crystal.xnb
+Content\Tiles\Tile - 11B.xnb
+Content\Tiles\Tile - 12B.xnb
+Content\Tiles\Tile - 17B.xnb
+Content\Tiles\Tile - 18B.xnb
+Content\Tiles\Tile - 19B.xnb
+Content\Tiles\Tile - 1B.xnb
+Content\Tiles\Tile - 20B.xnb
+Content\Tiles\Tile - 21B.xnb
+Content\Tiles\Tile - 22B.xnb
+Content\Tiles\Tile - 26B.xnb
+Content\Tiles\Tile - 27B.xnb
+Content\Tiles\Tile - 28B.xnb
+Content\Tiles\Tile - 29B.xnb
+Content\Tiles\Tile - 2B.xnb
+Content\Tiles\Tile - 30B.xnb
+Content\Tiles\Tile - 4B.xnb
+Content\Tiles\Tile - 5B.xnb
+Content\Tiles\Tile - 8B.xnb
+Content\Misc\dirt bg.xnb
+Content\Monster Cards\Act 2\Barghest.xnb
+Content\Monster Cards\Act 2\Shadow Dragon.xnb
+Content\Monster Cards\Act 2\Zombie.xnb
+Content\Search Deck\Curse Doll.xnb
+Content\Search Deck\Fire Flask.xnb
+Content\Search Deck\Health Potion.xnb
+Content\Search Deck\Nothing.xnb
+Content\Search Deck\Power Potion.xnb
+Content\Search Deck\Seach Back.xnb
+Content\Search Deck\Stamina Potion.xnb
+Content\Search Deck\Treasure Chest.xnb
+Content\Search Deck\Warding Talisman.xnb
+Content\Misc\Door Red.xnb
+Content\Misc\Door Yellow.xnb
+Content\Activation Deck\Forgotten Souls\FS Activation 01.xnb
+Content\Activation Deck\Forgotten Souls\FS Activation 02.xnb
+Content\Activation Deck\Forgotten Souls\FS Activation 03.xnb
+Content\Activation Deck\Forgotten Souls\FS Activation 04.xnb
+Content\Activation Deck\Forgotten Souls\FS Activation 05.xnb
+Content\Activation Deck\Forgotten Souls\FS Activation 06.xnb
+Content\Activation Deck\Forgotten Souls\FS Activation 07.xnb
+Content\Activation Deck\Forgotten Souls\FS Activation 08.xnb
+Content\Activation Deck\Forgotten Souls\FS Activation 09.xnb
+Content\Activation Deck\Forgotten Souls\FS Activation 10.xnb
+Content\Activation Deck\Forgotten Souls\FS Activation Back.xnb
+Content\Peril Deck\Forgotten Souls\Peril 1.xnb
+Content\Peril Deck\Forgotten Souls\Peril 2.xnb
+Content\Peril Deck\Forgotten Souls\Peril 3.xnb
+Content\Peril Deck\Forgotten Souls\Peril 4.xnb
+Content\Peril Deck\Forgotten Souls\Peril 5.xnb
+Content\Peril Deck\Forgotten Souls\Peril 6.xnb
+Content\Peril Deck\Forgotten Souls\Peril 7.xnb
+Content\Peril Deck\Forgotten Souls\Peril 8.xnb
+Content\Peril Deck\Forgotten Souls\Peril 9.xnb
+Content\Peril Deck\Forgotten Souls\Peril 10.xnb
+Content\Peril Deck\Forgotten Souls\Peril Back.xnb
+Content\Room Deck\Forgotten Souls\FS Expl 01.xnb
+Content\Room Deck\Forgotten Souls\FS Expl 02.xnb
+Content\Room Deck\Forgotten Souls\FS Expl 03.xnb
+Content\Room Deck\Forgotten Souls\FS Expl 04.xnb
+Content\Room Deck\Forgotten Souls\FS Expl 05.xnb
+Content\Room Deck\Forgotten Souls\FS Expl 06.xnb
+Content\Room Deck\Forgotten Souls\FS Expl 07.xnb
+Content\Room Deck\Forgotten Souls\FS Expl 08.xnb
+Content\Room Deck\Forgotten Souls\FS Expl 09.xnb
+Content\Room Deck\Forgotten Souls\FS Expl 10.xnb
+Content\Room Deck\Forgotten Souls\FS Expl 11.xnb
+Content\Room Deck\Forgotten Souls\FS Expl 12.xnb
+Content\Room Deck\Forgotten Souls\FS Expl Back.xnb
+Content\Misc\Doom-Loot Tracks.xnb
+Content\Tiles\Tile - EndBa.xnb
+Content\Tiles\Tile - EndBb.xnb
+Content\Tiles\Tile - EndBc.xnb
+Content\Tiles\Tile - EndBd.xnb
+Content\Misc\Door Red a.xnb
+Content\Misc\Door Yellow a.xnb
+Content\Monster Cards\Act 2\Flesh Moulder.xnb
+Content\Start Up Items\selection bg.xnb
+Content\Misc\Loot Tracker.xnb
+Content\Misc\Overlord Tracker.xnb
+Content\Tiles\Tile - Conn a.xnb
+Content\Tiles\Tile - Conn b.xnb
+Content\Fonts\Windlass 23.xnb
+Content\Fonts\Windlass 36.xnb
+Content\Fonts\Windlass 14.xnb
+Content\Misc\hero action paper.xnb
+Content\Misc\blank.xnb
+Content\sprite sheet 1.xnb
+Content\Classes\class sheet 1.xnb
+Content\Classes\class sheet 2.xnb
+Content\Classes\class sheet 3.xnb
+Content\Hero_Items\hero sheets 1.xnb
+Content\Hero_Items\hero sheets 2.xnb
+Content\Misc\black overlay.xnb
+Content\Fonts\Arial18.xnb

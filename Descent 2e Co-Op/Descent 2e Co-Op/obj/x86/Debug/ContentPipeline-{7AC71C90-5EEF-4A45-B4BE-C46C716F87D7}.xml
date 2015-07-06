@@ -1,0 +1,1217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Shop 1\Chainmail.jpg</Source>
+      <Name>Shop 1\Chainmail</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Chainmail.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Crossbow.jpg</Source>
+      <Name>Shop 1\Crossbow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Crossbow.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Elm Greatbow.jpg</Source>
+      <Name>Shop 1\Elm Greatbow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Elm Greatbow.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Heavy Cloak.jpg</Source>
+      <Name>Shop 1\Heavy Cloak</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Heavy Cloak.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Immolation.jpg</Source>
+      <Name>Shop 1\Immolation</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Immolation.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Iron Battleaxe.jpg</Source>
+      <Name>Shop 1\Iron Battleaxe</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Iron Battleaxe.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Iron Shield 1.jpg</Source>
+      <Name>Shop 1\Iron Shield 1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Iron Shield 1.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Iron Shield 2.jpg</Source>
+      <Name>Shop 1\Iron Shield 2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Iron Shield 2.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Iron Spear.jpg</Source>
+      <Name>Shop 1\Iron Spear</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Iron Spear.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Leather Armor 1.jpg</Source>
+      <Name>Shop 1\Leather Armor 1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Leather Armor 1.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Leather Armor 2.jpg</Source>
+      <Name>Shop 1\Leather Armor 2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Leather Armor 2.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Light Hammer.jpg</Source>
+      <Name>Shop 1\Light Hammer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Light Hammer.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Lucky Charm.jpg</Source>
+      <Name>Shop 1\Lucky Charm</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Lucky Charm.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Magic Staff.jpg</Source>
+      <Name>Shop 1\Magic Staff</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Magic Staff.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Mana Weave.jpg</Source>
+      <Name>Shop 1\Mana Weave</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Mana Weave.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Ring of Power.jpg</Source>
+      <Name>Shop 1\Ring of Power</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Ring of Power.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Scorpion Helm.jpg</Source>
+      <Name>Shop 1\Scorpion Helm</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Scorpion Helm.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Sling.jpg</Source>
+      <Name>Shop 1\Sling</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Sling.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Steel Broadsword.jpg</Source>
+      <Name>Shop 1\Steel Broadsword</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Steel Broadsword.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Sunburst.jpg</Source>
+      <Name>Shop 1\Sunburst</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Sunburst.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 1\Tier One Back.jpg</Source>
+      <Name>Shop 1\Tier One Back</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 1\Tier One Back.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Demonhide Leather.jpg</Source>
+      <Name>Shop 2\Demonhide Leather</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Demonhide Leather.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Dragontooth Hammer.jpg</Source>
+      <Name>Shop 2\Dragontooth Hammer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Dragontooth Hammer.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Dwarven Firebomb.jpg</Source>
+      <Name>Shop 2\Dwarven Firebomb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Dwarven Firebomb.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Elven Cloak.jpg</Source>
+      <Name>Shop 2\Elven Cloak</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Elven Cloak.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Grinding Axe.jpg</Source>
+      <Name>Shop 2\Grinding Axe</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Grinding Axe.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Heavy Steel Shield.jpg</Source>
+      <Name>Shop 2\Heavy Steel Shield</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Heavy Steel Shield.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Ice Storm.jpg</Source>
+      <Name>Shop 2\Ice Storm</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Ice Storm.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Iron Bound Ring.jpg</Source>
+      <Name>Shop 2\Iron Bound Ring</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Iron Bound Ring.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Latari Longbow.jpg</Source>
+      <Name>Shop 2\Latari Longbow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Latari Longbow.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Lightning Strike.jpg</Source>
+      <Name>Shop 2\Lightning Strike</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Lightning Strike.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Mace of Kellos.jpg</Source>
+      <Name>Shop 2\Mace of Kellos</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Mace of Kellos.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Platemail.jpg</Source>
+      <Name>Shop 2\Platemail</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Platemail.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Steel Greatsword.jpg</Source>
+      <Name>Shop 2\Steel Greatsword</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Steel Greatsword.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Tier Two Back.jpg</Source>
+      <Name>Shop 2\Tier Two Back</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Tier Two Back.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Shop 2\Tival Crystal.jpg</Source>
+      <Name>Shop 2\Tival Crystal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Shop 2\Tival Crystal.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 11B.png</Source>
+      <Name>Tiles\Tile - 11B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 11B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 12B.png</Source>
+      <Name>Tiles\Tile - 12B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 12B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 17B.png</Source>
+      <Name>Tiles\Tile - 17B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 17B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 18B.png</Source>
+      <Name>Tiles\Tile - 18B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 18B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 19B.png</Source>
+      <Name>Tiles\Tile - 19B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 19B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 1B.png</Source>
+      <Name>Tiles\Tile - 1B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 1B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 20B.png</Source>
+      <Name>Tiles\Tile - 20B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 20B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 21B.png</Source>
+      <Name>Tiles\Tile - 21B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 21B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 22B.png</Source>
+      <Name>Tiles\Tile - 22B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 22B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 26B.png</Source>
+      <Name>Tiles\Tile - 26B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 26B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 27B.png</Source>
+      <Name>Tiles\Tile - 27B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 27B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 28B.png</Source>
+      <Name>Tiles\Tile - 28B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 28B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 29B.png</Source>
+      <Name>Tiles\Tile - 29B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 29B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 2B.png</Source>
+      <Name>Tiles\Tile - 2B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 2B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 30B.png</Source>
+      <Name>Tiles\Tile - 30B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 30B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 4B.png</Source>
+      <Name>Tiles\Tile - 4B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 4B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 5B.png</Source>
+      <Name>Tiles\Tile - 5B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 5B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - 8B.png</Source>
+      <Name>Tiles\Tile - 8B</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - 8B.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Misc\dirt bg.jpg</Source>
+      <Name>Misc\dirt bg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Misc\dirt bg.xnb</Output>
+      <Time>2015-05-15T12:37:41.2579603-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Monster Cards\Act 2\Barghest.jpg</Source>
+      <Name>Monster Cards\Act 2\Barghest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Monster Cards\Act 2\Barghest.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Monster Cards\Act 2\Shadow Dragon.jpg</Source>
+      <Name>Monster Cards\Act 2\Shadow Dragon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Monster Cards\Act 2\Shadow Dragon.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Monster Cards\Act 2\Zombie.jpg</Source>
+      <Name>Monster Cards\Act 2\Zombie</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Monster Cards\Act 2\Zombie.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Search Deck\Curse Doll.jpg</Source>
+      <Name>Search Deck\Curse Doll</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Search Deck\Curse Doll.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Search Deck\Fire Flask.jpg</Source>
+      <Name>Search Deck\Fire Flask</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Search Deck\Fire Flask.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Search Deck\Health Potion.jpg</Source>
+      <Name>Search Deck\Health Potion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Search Deck\Health Potion.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Search Deck\Nothing.jpg</Source>
+      <Name>Search Deck\Nothing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Search Deck\Nothing.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Search Deck\Power Potion.jpg</Source>
+      <Name>Search Deck\Power Potion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Search Deck\Power Potion.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Search Deck\Seach Back.jpg</Source>
+      <Name>Search Deck\Seach Back</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Search Deck\Seach Back.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Search Deck\Stamina Potion.jpg</Source>
+      <Name>Search Deck\Stamina Potion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Search Deck\Stamina Potion.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Search Deck\Treasure Chest.jpg</Source>
+      <Name>Search Deck\Treasure Chest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Search Deck\Treasure Chest.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Search Deck\Warding Talisman.jpg</Source>
+      <Name>Search Deck\Warding Talisman</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Search Deck\Warding Talisman.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Misc\Door Red.png</Source>
+      <Name>Misc\Door Red</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Misc\Door Red.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Misc\Door Yellow.png</Source>
+      <Name>Misc\Door Yellow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Misc\Door Yellow.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Activation Deck\Forgotten Souls\FS Activation 01.jpg</Source>
+      <Name>Activation Deck\Forgotten Souls\FS Activation 01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Activation Deck\Forgotten Souls\FS Activation 01.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Activation Deck\Forgotten Souls\FS Activation 02.jpg</Source>
+      <Name>Activation Deck\Forgotten Souls\FS Activation 02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Activation Deck\Forgotten Souls\FS Activation 02.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Activation Deck\Forgotten Souls\FS Activation 03.jpg</Source>
+      <Name>Activation Deck\Forgotten Souls\FS Activation 03</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Activation Deck\Forgotten Souls\FS Activation 03.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Activation Deck\Forgotten Souls\FS Activation 04.jpg</Source>
+      <Name>Activation Deck\Forgotten Souls\FS Activation 04</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Activation Deck\Forgotten Souls\FS Activation 04.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Activation Deck\Forgotten Souls\FS Activation 05.jpg</Source>
+      <Name>Activation Deck\Forgotten Souls\FS Activation 05</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Activation Deck\Forgotten Souls\FS Activation 05.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Activation Deck\Forgotten Souls\FS Activation 06.jpg</Source>
+      <Name>Activation Deck\Forgotten Souls\FS Activation 06</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Activation Deck\Forgotten Souls\FS Activation 06.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Activation Deck\Forgotten Souls\FS Activation 07.jpg</Source>
+      <Name>Activation Deck\Forgotten Souls\FS Activation 07</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Activation Deck\Forgotten Souls\FS Activation 07.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Activation Deck\Forgotten Souls\FS Activation 08.jpg</Source>
+      <Name>Activation Deck\Forgotten Souls\FS Activation 08</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Activation Deck\Forgotten Souls\FS Activation 08.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Activation Deck\Forgotten Souls\FS Activation 09.jpg</Source>
+      <Name>Activation Deck\Forgotten Souls\FS Activation 09</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Activation Deck\Forgotten Souls\FS Activation 09.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Activation Deck\Forgotten Souls\FS Activation 10.jpg</Source>
+      <Name>Activation Deck\Forgotten Souls\FS Activation 10</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Activation Deck\Forgotten Souls\FS Activation 10.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Activation Deck\Forgotten Souls\FS Activation Back.jpg</Source>
+      <Name>Activation Deck\Forgotten Souls\FS Activation Back</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Activation Deck\Forgotten Souls\FS Activation Back.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl 01.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl 01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl 01.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl 02.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl 02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl 02.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl 03.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl 03</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl 03.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl 04.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl 04</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl 04.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl 05.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl 05</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl 05.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl 06.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl 06</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl 06.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl 07.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl 07</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl 07.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl 08.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl 08</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl 08.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl 09.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl 09</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl 09.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl 10.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl 10</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl 10.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl 11.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl 11</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl 11.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl 12.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl 12</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl 12.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Room Deck\Forgotten Souls\FS Expl Back.jpg</Source>
+      <Name>Room Deck\Forgotten Souls\FS Expl Back</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Room Deck\Forgotten Souls\FS Expl Back.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Misc\Doom-Loot Tracks.jpg</Source>
+      <Name>Misc\Doom-Loot Tracks</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Misc\Doom-Loot Tracks.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - EndBa.png</Source>
+      <Name>Tiles\Tile - EndBa</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - EndBa.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - EndBb.png</Source>
+      <Name>Tiles\Tile - EndBb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - EndBb.xnb</Output>
+      <Time>2015-05-27T09:23:03.7124141-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - EndBc.png</Source>
+      <Name>Tiles\Tile - EndBc</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - EndBc.xnb</Output>
+      <Time>2015-05-27T09:22:55.5679483-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - EndBd.png</Source>
+      <Name>Tiles\Tile - EndBd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - EndBd.xnb</Output>
+      <Time>2015-05-27T09:22:59.1281519-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Misc\Door Red a.png</Source>
+      <Name>Misc\Door Red a</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Misc\Door Red a.xnb</Output>
+      <Time>2015-05-27T09:25:50.3749467-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Misc\Door Yellow a.png</Source>
+      <Name>Misc\Door Yellow a</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Misc\Door Yellow a.xnb</Output>
+      <Time>2015-05-27T09:25:52.461066-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Monster Cards\Act 2\Flesh Moulder.jpg</Source>
+      <Name>Monster Cards\Act 2\Flesh Moulder</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Monster Cards\Act 2\Flesh Moulder.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Start Up Items\selection bg.png</Source>
+      <Name>Start Up Items\selection bg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Start Up Items\selection bg.xnb</Output>
+      <Time>2015-05-28T15:27:06.3460938-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Misc\Loot Tracker.png</Source>
+      <Name>Misc\Loot Tracker</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Misc\Loot Tracker.xnb</Output>
+      <Time>2015-05-28T16:08:47.209135-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Misc\Overlord Tracker.png</Source>
+      <Name>Misc\Overlord Tracker</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Misc\Overlord Tracker.xnb</Output>
+      <Time>2015-05-28T16:07:47.1897021-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - Conn a.PNG</Source>
+      <Name>Tiles\Tile - Conn a</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - Conn a.xnb</Output>
+      <Time>1980-01-01T00:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\Tile - Conn b.PNG</Source>
+      <Name>Tiles\Tile - Conn b</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Tiles\Tile - Conn b.xnb</Output>
+      <Time>2015-05-29T22:26:28-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\Windlass 36.bmp</Source>
+      <Name>Fonts\Windlass 36</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>FontTextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Fonts\Windlass 36.xnb</Output>
+      <Time>2015-06-01T11:48:16.2451703-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\Windlass 23.bmp</Source>
+      <Name>Fonts\Windlass 23</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>FontTextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Fonts\Windlass 23.xnb</Output>
+      <Time>2015-06-01T10:29:15.5830199-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\Windlass 14.bmp</Source>
+      <Name>Fonts\Windlass 14</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>FontTextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Fonts\Windlass 14.xnb</Output>
+      <Time>2015-06-01T15:46:45.6906238-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\Arial18.spritefont</Source>
+      <Name>Fonts\Arial18</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Fonts\Arial18.xnb</Output>
+      <Time>2015-06-02T16:07:07.6424367-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Misc\hero action paper.png</Source>
+      <Name>Misc\hero action paper</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Misc\hero action paper.xnb</Output>
+      <Time>2015-06-04T11:36:05.6851875-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Peril Deck\Forgotten Souls\Peril 1.jpg</Source>
+      <Name>Peril Deck\Forgotten Souls\Peril 1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Peril Deck\Forgotten Souls\Peril 1.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Peril Deck\Forgotten Souls\Peril 2.jpg</Source>
+      <Name>Peril Deck\Forgotten Souls\Peril 2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Peril Deck\Forgotten Souls\Peril 2.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Peril Deck\Forgotten Souls\Peril 3.jpg</Source>
+      <Name>Peril Deck\Forgotten Souls\Peril 3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Peril Deck\Forgotten Souls\Peril 3.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Peril Deck\Forgotten Souls\Peril 4.jpg</Source>
+      <Name>Peril Deck\Forgotten Souls\Peril 4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Peril Deck\Forgotten Souls\Peril 4.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Peril Deck\Forgotten Souls\Peril 5.jpg</Source>
+      <Name>Peril Deck\Forgotten Souls\Peril 5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Peril Deck\Forgotten Souls\Peril 5.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Peril Deck\Forgotten Souls\Peril 6.jpg</Source>
+      <Name>Peril Deck\Forgotten Souls\Peril 6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Peril Deck\Forgotten Souls\Peril 6.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Peril Deck\Forgotten Souls\Peril 7.jpg</Source>
+      <Name>Peril Deck\Forgotten Souls\Peril 7</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Peril Deck\Forgotten Souls\Peril 7.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Peril Deck\Forgotten Souls\Peril 8.jpg</Source>
+      <Name>Peril Deck\Forgotten Souls\Peril 8</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Peril Deck\Forgotten Souls\Peril 8.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Peril Deck\Forgotten Souls\Peril 9.jpg</Source>
+      <Name>Peril Deck\Forgotten Souls\Peril 9</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Peril Deck\Forgotten Souls\Peril 9.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Peril Deck\Forgotten Souls\Peril 10.jpg</Source>
+      <Name>Peril Deck\Forgotten Souls\Peril 10</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Peril Deck\Forgotten Souls\Peril 10.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Peril Deck\Forgotten Souls\Peril Back.jpg</Source>
+      <Name>Peril Deck\Forgotten Souls\Peril Back</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Peril Deck\Forgotten Souls\Peril Back.xnb</Output>
+      <Time>1979-12-31T23:00:00-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Misc\blank.png</Source>
+      <Name>Misc\blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Misc\blank.xnb</Output>
+      <Time>2015-06-11T15:25:08.6390767-04:00</Time>
+    </Item>
+    <Item>
+      <Source>sprite sheet 1.png</Source>
+      <Name>sprite sheet 1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\sprite sheet 1.xnb</Output>
+      <Time>2015-07-01T11:48:04.5963415-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Classes\class sheet 1.png</Source>
+      <Name>Classes\class sheet 1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Classes\class sheet 1.xnb</Output>
+      <Time>2015-06-22T11:50:54.6173356-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Classes\class sheet 2.png</Source>
+      <Name>Classes\class sheet 2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Classes\class sheet 2.xnb</Output>
+      <Time>2015-06-22T11:56:58.0621235-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Classes\class sheet 3.png</Source>
+      <Name>Classes\class sheet 3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Classes\class sheet 3.xnb</Output>
+      <Time>2015-06-22T12:00:37.9116982-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Hero_Items\hero sheets 1.png</Source>
+      <Name>Hero_Items\hero sheets 1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Hero_Items\hero sheets 1.xnb</Output>
+      <Time>2015-06-22T12:59:42.0484112-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Hero_Items\hero sheets 2.png</Source>
+      <Name>Hero_Items\hero sheets 2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Hero_Items\hero sheets 2.xnb</Output>
+      <Time>2015-06-22T12:59:41.6923908-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Misc\black overlay.png</Source>
+      <Name>Misc\black overlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Misc\black overlay.xnb</Output>
+      <Time>2015-05-27T16:19:49.5796679-04:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{7AC71C90-5EEF-4A45-B4BE-C46C716F87D7}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-OpContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-03-03T14:55:24.733724-05:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

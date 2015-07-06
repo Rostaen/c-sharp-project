@@ -1,0 +1,139 @@
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Chainmail.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Crossbow.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Elm Greatbow.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Heavy Cloak.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Immolation.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Iron Battleaxe.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Iron Shield 1.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Iron Shield 2.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Iron Spear.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Leather Armor 1.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Leather Armor 2.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Light Hammer.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Lucky Charm.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Magic Staff.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Mana Weave.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Ring of Power.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Scorpion Helm.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Sling.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Steel Broadsword.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Sunburst.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 1\Tier One Back.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Demonhide Leather.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Dragontooth Hammer.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Dwarven Firebomb.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Elven Cloak.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Grinding Axe.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Heavy Steel Shield.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Ice Storm.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Iron Bound Ring.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Latari Longbow.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Lightning Strike.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Mace of Kellos.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Platemail.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Steel Greatsword.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Tier Two Back.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Shop 2\Tival Crystal.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 11B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 12B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 17B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 18B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 19B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 1B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 20B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 21B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 22B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 26B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 27B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 28B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 29B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 2B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 30B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 4B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 5B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - 8B.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Misc\dirt bg.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Monster Cards\Act 2\Barghest.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Monster Cards\Act 2\Shadow Dragon.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Monster Cards\Act 2\Zombie.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Search Deck\Curse Doll.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Search Deck\Fire Flask.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Search Deck\Health Potion.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Search Deck\Nothing.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Search Deck\Power Potion.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Search Deck\Seach Back.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Search Deck\Stamina Potion.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Search Deck\Treasure Chest.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Search Deck\Warding Talisman.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Misc\Door Red.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Misc\Door Yellow.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Activation Deck\Forgotten Souls\FS Activation 01.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Activation Deck\Forgotten Souls\FS Activation 02.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Activation Deck\Forgotten Souls\FS Activation 03.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Activation Deck\Forgotten Souls\FS Activation 04.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Activation Deck\Forgotten Souls\FS Activation 05.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Activation Deck\Forgotten Souls\FS Activation 06.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Activation Deck\Forgotten Souls\FS Activation 07.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Activation Deck\Forgotten Souls\FS Activation 08.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Activation Deck\Forgotten Souls\FS Activation 09.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Activation Deck\Forgotten Souls\FS Activation 10.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Activation Deck\Forgotten Souls\FS Activation Back.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Peril Deck\Forgotten Souls\Peril 1.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Peril Deck\Forgotten Souls\Peril 2.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Peril Deck\Forgotten Souls\Peril 3.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Peril Deck\Forgotten Souls\Peril 4.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Peril Deck\Forgotten Souls\Peril 5.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Peril Deck\Forgotten Souls\Peril 6.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Peril Deck\Forgotten Souls\Peril 7.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Peril Deck\Forgotten Souls\Peril 8.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Peril Deck\Forgotten Souls\Peril 9.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Peril Deck\Forgotten Souls\Peril 10.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Peril Deck\Forgotten Souls\Peril Back.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl 01.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl 02.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl 03.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl 04.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl 05.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl 06.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl 07.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl 08.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl 09.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl 10.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl 11.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl 12.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Room Deck\Forgotten Souls\FS Expl Back.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Misc\Doom-Loot Tracks.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - EndBa.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - EndBb.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - EndBc.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - EndBd.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Misc\Door Red a.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Misc\Door Yellow a.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Monster Cards\Act 2\Flesh Moulder.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Start Up Items\selection bg.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Misc\Loot Tracker.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Misc\Overlord Tracker.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - Conn a.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Tiles\Tile - Conn b.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Fonts\Windlass 23.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Fonts\Windlass 36.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Fonts\Windlass 14.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Misc\hero action paper.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Misc\blank.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\sprite sheet 1.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Classes\class sheet 1.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Classes\class sheet 2.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Classes\class sheet 3.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Hero_Items\hero sheets 1.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Hero_Items\hero sheets 2.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Misc\black overlay.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Content\Fonts\Arial18.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Descent 2e Co-Op.exe
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Descent 2e Co-Op.pdb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\obj\x86\Release\Descent 2e Co-Op.exe
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\obj\x86\Release\Descent 2e Co-Op.pdb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Descent 2e Co-Op.exe.manifest
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Release\Descent 2e Co-Op.application
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\obj\x86\Release\Descent 2e Co-Op.exe.manifest
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\obj\x86\Release\Descent 2e Co-Op.application

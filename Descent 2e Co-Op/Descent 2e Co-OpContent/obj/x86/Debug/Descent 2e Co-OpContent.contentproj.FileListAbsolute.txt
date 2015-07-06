@@ -1,0 +1,2 @@
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-OpContent\obj\x86\Debug\Descent 2e Co-OpContent.contentprojResolveAssemblyReference.cache
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-OpContent\obj\x86\Debug\Descent 2e Co-OpContent.contentprojResolveAssemblyReference.cache
