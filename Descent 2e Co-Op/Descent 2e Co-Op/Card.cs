@@ -26,6 +26,10 @@ namespace Descent_2e_Co_Op
         string type = "", trait = "", bonus1 = "", bonus2 = "", surge1 = "", surge2 = "", surge3="";
         int attackDie1, attackDie2, attackDie3, defenseDie1, defenseDie2, numOfHands = 1;
 
+        // Encounter Room Values
+        int timer = 0;
+
+        // 
 
 		#region Constructors
 		/// <summary>
@@ -92,12 +96,24 @@ namespace Descent_2e_Co_Op
             this.name = name; this.type = type; this.trait = trait; this.bonus1 = bonus1; this.bonus2 = bonus2; this.surge1 = surge1; this.surge2 = surge2; this.surge3 = surge3;
             this.numOfHands = numbOfHands; attackDie1 = die1; attackDie2 = die2; attackDie3 = die3; defenseDie1 = def1; defenseDie2 = def2;
         }
+
+        /// <summary>
+        /// Constructor for an encounter room card
+        /// </summary>
+        /// <param name="source">The source off the sprite sheet</param>
+        /// <param name="drawRectangle">The location of where to draw the card</param>
+        /// <param name="timer">How long the heroes have to manage in the room</param>
+        public Card(Rectangle source, Rectangle drawRectangle, int timer)
+        {
+            this.sourceRectangle = source; this.drawRectangle = drawRectangle; this.timer = timer;
+        }
+
 		#endregion
 
 		#region Properties
         public Rectangle DrawRectangle { get { return drawRectangle; } set { drawRectangle = value; } }
         public Rectangle SourceRectangle { get { return sourceRectangle; } }
-		public string Name { get { return name; } }
+        public string Name { get { return name; } set { name = value; } }
 		public int Value { get { return value; } }
 		public bool Active { get { return active; } set { active = value; } }
 		public bool HasMonsterSide { get { return hasMonsterSide; } }
@@ -118,6 +134,7 @@ namespace Descent_2e_Co_Op
         public int Defense1 { get { return defenseDie1; } }
         public int Defense2 { get { return defenseDie2; } }
         public int NumOfHands { get { return numOfHands; } }
+        public int Timer { get { return timer; } set { timer = value; } }
 		#endregion
 
 		#region Public Methods

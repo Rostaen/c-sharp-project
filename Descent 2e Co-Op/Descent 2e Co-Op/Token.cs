@@ -17,10 +17,10 @@ namespace Descent_2e_Co_Op
 
         // Graphics and drawing info
         Rectangle drawRectangle, originalDrawRect, sourceRectangle = new Rectangle();
-        Vector2 location, direction = Vector2.Zero, target = Vector2.Zero, originalPosition;
+        Vector2 location, direction = Vector2.Zero, target = Vector2.Zero, originalPosition, miniTarget = Vector2.Zero;
 
         string name = "";
-        bool active = true, clicked = false, targetReached = true, xReached = false, yReached = false, negXDir = false, negYDir = false, isMaster = false,
+        bool active = true, clicked = false, targetReached = true, xReached = false, yReached = false, miniXReached = false, miniYReached = false, negXDir = false, negYDir = false, isMaster = false,
              knockedOut = false, dead = false, hasMoved = false, occupied = false;
         bool[] conditions = { false, false, false, false }; // Conditions are as such: Poison, Disease, Stun, Immobilized
 
@@ -238,6 +238,7 @@ namespace Descent_2e_Co_Op
                     location += direction * GameConstants.TOKEN_MOVE_SPEED * gameTime.ElapsedGameTime.Milliseconds;
                     drawRectangle.X = (int)location.X - halfDrawRectangleWidth;
                     drawRectangle.Y = (int)location.Y - halfDrawRectangleHeight;
+
                     if (!xReached)
                     {
                         if (negXDir) { if (location.X - target.X <= 0) xReached = true; } 
@@ -247,7 +248,6 @@ namespace Descent_2e_Co_Op
                     {
                         if (negYDir) { if (location.Y - target.Y <= 0) yReached = true; }
                         else { if (target.Y - location.Y <= 0) yReached = true; }
-
                     }
 					if (xReached && yReached) { targetReached = true; negXDir = false; negYDir = false; }
                 }

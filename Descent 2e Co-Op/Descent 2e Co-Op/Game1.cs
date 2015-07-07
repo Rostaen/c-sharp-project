@@ -66,7 +66,7 @@ namespace Descent_2e_Co_Op
         List<string> surgeList = new List<string>();
         List<Token> testing = new List<Token>();
         List<Card> awardedShopCards = new List<Card>();
-        Deck searchDeck, perilDeck, shop1Deck, shop2Deck;
+        Deck searchDeck, perilDeck, shop1Deck, shop2Deck, roomDeck;
         //monsterActivationDeck, 
 
         List<Token> dots = new List<Token>();
@@ -84,6 +84,8 @@ namespace Descent_2e_Co_Op
         string currentRoom = "19B", selectedHeroName = "", weaponUsed = "", familiarAction ="", theClassName = "";
         int numHeroTurns = 2, numHeroesPlaying = 2, creatingHeroNumber = 1, currentHeroTurn = 1, numOfHealers = 0, numOfMages = 0, numOfScouts = 0, numOfWarriors = 0, attackRange = 0, heroNumPosition = -1,
             skillUsed = -1, timer = 0, heroPlacementCount = 0, buySkill = 0, loadTokensSheets = 0, masterKillCount = 1;
+
+        Card awardedCardHold;
 
         Equipment attackingWeapon;
 
@@ -253,14 +255,15 @@ namespace Descent_2e_Co_Op
             movementButtons.Add(new Token(menuButtonRect, 3, 0, 138, new Rectangle(768, 712, 150, 64)));
 
 			// Setting up Decks
-			searchDeck = new Deck(Content, "Search", "");
+			searchDeck = new Deck("Search", "");
 			searchDeck.Shuffle(random);
-			perilDeck = new Deck(Content, "Peril", "Forgotten Souls");
+			perilDeck = new Deck("Peril", "Forgotten Souls");
 			perilDeck.Shuffle(random);
-            shop1Deck = new Deck(Content, "Shop 1", "");
+            shop1Deck = new Deck("Shop 1", "");
             shop1Deck.Shuffle(random);
-            shop2Deck = new Deck(Content, "Shop 2", "");
+            shop2Deck = new Deck("Shop 2", "");
             shop2Deck.Shuffle(random);
+            roomDeck = new Deck("Room", "Forgotten Souls"); // no shuffling of this deck, it is done upon construction
 
         }
 
@@ -999,7 +1002,7 @@ namespace Descent_2e_Co_Op
                                             }
                                             else attackHit = false;
                                         }
-                                        messages.Add(new Message("Rng: " + totalRange + " Dmg: " + totalAttack + " Srg: " + totalSurge + " Def: " + totalDefense, windlassFont23, centerWindowMessage));
+                                        if(!awardingLoot) messages.Add(new Message("Rng: " + totalRange + " Dmg: " + totalAttack + " Srg: " + totalSurge + " Def: " + totalDefense, windlassFont23, centerWindowMessage));
 									}
 									if (!calcAttack && !attackHit && totalRange == 0) messages.Add(new Message("Attack missed...", windlassFont23, centerWindowMessage));
 									if (mouse.LeftButton == ButtonState.Pressed && leftButtonReleased) { leftClickStarted = true; leftButtonReleased = false; }
@@ -1119,6 +1122,30 @@ namespace Descent_2e_Co_Op
 														calcAttack = false;
 													}
 												}
+                                            }
+                                            #endregion
+                                            #region Checks for reward click
+                                            if (awardingLoot)
+                                            {
+                                                bool lootTaken = false;
+                                                foreach (Card loot in awardedShopCards)
+                                                    if (loot.DrawRectangle.Contains(mouse.X, mouse.Y))
+                                                    {
+                                                        currentHeroClass.AddToBackPack(loot);
+                                                        awardedCardHold = loot;
+                                                        lootTaken = true;
+                                                    }
+                                                if (lootTaken)
+                                                {
+                                                    awardedShopCards.Remove(awardedCardHold);
+                                                    foreach (Card loot in awardedShopCards)
+                                                    {
+                                                        if (currentAct == 1) { shop1Deck.putCardBack(loot); shop1Deck.Shuffle(random); }
+                                                        else { shop2Deck.putCardBack(loot); shop2Deck.Shuffle(random); }
+                                                    }
+                                                    lootTaken = false; awardingLoot = false;
+                                                    messages.Clear();
+                                                }
                                             }
                                             #endregion
                                         }
@@ -2102,14 +2129,15 @@ namespace Descent_2e_Co_Op
         {
             awardingLoot = true;
             messages.Clear();
-            messages.Add(new Message("Choose one piece of treasure for the target bounty.", windlassFont23, centerWindowMessage));
+            messages.Add(new Message("You have been awarded treasure!", windlassFont23, centerWindowMessage));
+            messages.Add(new Message("Choose only one item as your reward.", windlassFont14, new Vector2 (centerWindowMessage.X, centerWindowMessage.Y + 30)));
             for (int x = 0; x < masterKillCount; x++)
             {
                 Rectangle drawRect;
                 if (currentAct == 1) awardedShopCards.Add(shop1Deck.pullShopCard(hero));
                 else awardedShopCards.Add(shop2Deck.pullShopCard(hero));
-                if(x < 5) drawRect =  new Rectangle(creationRec.X + 25 + (x * 138), creationRec.Y + 100, 128, 192);
-                else drawRect = new Rectangle(creationRec.X + 25 + ((x - 5) * 138), creationRec.Y + 302, 128, 192);
+                if(x < 5) drawRect =  new Rectangle(creationRec.X + 50 + (x * 138), creationRec.Y + 200, 128, 192);
+                else drawRect = new Rectangle(creationRec.X + 50 + ((x - 5) * 138), creationRec.Y + 402, 128, 192);
                 awardedShopCards[awardedShopCards.Count - 1].DrawRectangle = drawRect;
             }
         }
@@ -2133,9 +2161,9 @@ namespace Descent_2e_Co_Op
             foreach (HeroSheet hSheet in heroSheets)
                 if (hSheet.ActiveSheet)
                 {
-                    string theClassName = hSheet.PickedClass.ClassName;
-                    if (theClassName == "disciple" || theClassName == "spirit speaker" || theClassName == "necromancer" || theClassName == "runemaster") { hSheet.Draw(spriteBatch, heroSheet1, classSheet1); }
-                    else hSheet.Draw(spriteBatch, heroSheet1, classSheet2);                    
+                    string theName = hSheet.Name;
+                    if (theName == "Avric" || theName == "Ashrian" || theName == "Leoric" || theName == "Tarha") { hSheet.Draw(spriteBatch, heroSheet1, classSheet1); }
+                    else hSheet.Draw(spriteBatch, heroSheet2, classSheet2);                    
                     bar1BG.Draw(spriteBatch, spriteSheet1); bar2BG.Draw(spriteBatch, spriteSheet1);
                     int numPos = heroTokens[heroNumPosition].Variable - 1;
                     hpBars[numPos].Draw(spriteBatch, spriteSheet1);
@@ -2162,7 +2190,8 @@ namespace Descent_2e_Co_Op
                     foreach (HeroSheet hSheet in heroSheets)
                     {
                         string className = hSheet.PickedClass.ClassName;
-                        foreach (Token skillCard in hSheet.PickedClass.AllSkillCards) if (skillCard.Active)
+                        foreach (Token skillCard in hSheet.PickedClass.AllSkillCards) 
+                            if (skillCard.Active)
                             {
                                 if (className == "disciple" || className == "spirit speaker" || className == "necromancer" || className == "runemaster") { if (skillCard.Active) skillCard.Draw(spriteBatch, classSheet1); }
                                 else { if (skillCard.Active)skillCard.Draw(spriteBatch, classSheet2); }

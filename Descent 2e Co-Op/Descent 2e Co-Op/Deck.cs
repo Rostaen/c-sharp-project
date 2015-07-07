@@ -27,7 +27,7 @@ namespace Descent_2e_Co_Op
 		/// </summary>
 		/// <param name="content">The content manager</param>
         /// <param name="type">The type of deck to construct: Search, Peril, Shop 1, Shop 2, Activation, Room</param>
-		public Deck(ContentManager content, string type, string adventureName)
+		public Deck(string type, string adventureName)
 		{
             this.type = type;
             if (type == "Search")
@@ -95,6 +95,59 @@ namespace Descent_2e_Co_Op
                 cardDeck.Add(new Card(new Rectangle(256, 576, 128, 192), "Steel Greatsword", "melee", "Blade", "reroll1powerdie", "", "pierce2", "1dmg", "", 2, 0, 1, 2, -1, -1));
                 cardDeck.Add(new Card(new Rectangle(384, 576, 128, 192), "Tival Crystal", "trinket", "Trinket", "action:exhaustroll1red", "", "", "", "", 0, -1, -1, -1, -1, -1));
             }
+            else if (type == "Room")
+            {
+                string[] roomNames = {"The Onset", "Room Of Souls", "The Lava Tomb", "Throne Of The Fallen", "Treasure Vault", "Fungus Filled Passage", 
+                                      "Deadly Kennel", "Trash Heap", "Lengthy Sewers", "Shiny Corridor", "Hall of Riddles", "Tunnel's End"};
+                // Creating cards from sheet
+                for (int x = 0; x < 12; x++)
+                {
+                    if (x < 7) cardDeck.Add(new Card(new Rectangle(x * 304, 881, 304, 520), new Rectangle(50, GameConstants.HALF_WINDOW_HEIGHT() - 260, 304, 520), 3));
+                    else cardDeck.Add(new Card(new Rectangle((x - 7) * 304, 1401, 304, 520), new Rectangle(50, GameConstants.HALF_WINDOW_HEIGHT() - 260, 304, 520), 3));
+                    cardDeck[x].Name = roomNames[x];
+                }
+                // Updating specific cards with timer != 3
+                cardDeck[0].Timer = 2; cardDeck[3].Timer = 0; cardDeck[9].Timer = 0; cardDeck[10].Timer = 0; cardDeck[11].Timer = 0;
+                // Taking specific cards to be set aside
+                Card beginning = cardDeck[0], room1 = cardDeck[1], room2 = cardDeck[2], room3 = cardDeck[3];
+                // Removing specific cards from deck
+                for(int x=0; x<4; x++) cardDeck.RemoveAt(x);
+                // Shuffling the deck
+                Random rand = new Random();
+                Shuffle(rand);
+                // Creating temporary smaller decks specific to the rules
+                List<Card> deck1 = new List<Card>(), deck2 = new List<Card>(), deck3 = new List<Card>();
+                // Adding cards from major deck into smaller decks as per the rules
+                for (int x = 0; x < 8; x++)
+                {
+                    if (x < 3) { deck1.Add(cardDeck[0]); cardDeck.RemoveAt(0); }
+                    else if (x > 2 && x < 6) { deck2.Add(cardDeck[0]); cardDeck.RemoveAt(0); }
+                    else { deck3.Add(cardDeck[0]); cardDeck.RemoveAt(0); }
+                }
+                // adding set aside cards back to smaller decks
+                deck1.Insert(0, room1); deck2.Insert(0, room2); deck3.Insert(0, room3);
+
+                cardDeck.Add(beginning);
+
+                for (int x = 0; x < 4; x++)
+                {
+                    int temp = rand.Next(0, deck1.Count);
+                    cardDeck.Add(deck1[temp]);
+                    deck1.RemoveAt(temp);
+                }
+                for (int x = 0; x < 4; x++)
+                {
+                    int temp = rand.Next(0, deck2.Count);
+                    cardDeck.Add(deck2[temp]);
+                    deck2.RemoveAt(temp);
+                }
+                for (int x = 0; x < 3; x++)
+                {
+                    int temp = rand.Next(0, deck3.Count);
+                    cardDeck.Add(deck3[temp]);
+                    deck3.RemoveAt(temp);
+                }
+            }
 		}
 
 		#endregion
@@ -151,6 +204,14 @@ namespace Descent_2e_Co_Op
                 return tempCard;
             }
             else return null;
+        }
+
+        public Card pullRoomCard()
+        {
+            Card tempCard = cardDeck[0];
+            cardDeck.RemoveAt(0);
+            discardDeck.Add(tempCard);
+            return tempCard;
         }
 
         /// <summary>
