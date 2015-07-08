@@ -21,6 +21,7 @@ namespace Descent_2e_Co_Op
         
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        public SpriteFont windlassFont6;
         public SpriteFont windlassFont14;
         public SpriteFont windlassFont23;
         public SpriteFont windlassFont36;
@@ -174,6 +175,7 @@ namespace Descent_2e_Co_Op
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // Loading Fonts
+            windlassFont6 = Content.Load<SpriteFont>("Fonts/Windlass 6");
             windlassFont14 = Content.Load<SpriteFont>("Fonts/Windlass 14");
             windlassFont23 = Content.Load<SpriteFont>("Fonts/Windlass 23");
             windlassFont36 = Content.Load<SpriteFont>("Fonts/Windlass 36");
@@ -873,9 +875,7 @@ namespace Descent_2e_Co_Op
                                                 familiarChoosing = false;
                                                 familiarActionSheetOn = false;
                                                 messages.Clear();
-                                                if (floorLight.Active && !floorLight.Occupied) { heroTokens[heroTokens.Count - 1].SetTarget(new Vector2(mouse.X, mouse.Y)); 
-                                                    heroMoving = true;
-                                                }
+                                                if (floorLight.Active && !floorLight.Occupied) { heroTokens[heroTokens.Count - 1].NewSetTarget(new Vector2(floorLight.DrawRectangle.Width / 2, floorLight.DrawRectangle.Height / 2)); heroMoving = true; }
                                                 familiarMoved = true;
                                                 familiarAction = "";                                                
                                             }
@@ -1220,7 +1220,11 @@ namespace Descent_2e_Co_Op
                                             {
                                                 if (selectedHeroName == hToken.Name)
                                                 {
-													foreach (Token floorLight in floorHighlights) if (floorLight.DrawRectangle.Contains(mouse.X, mouse.Y) && floorLight.Active && !floorLight.Occupied) { hToken.SetTarget(new Vector2(mouse.X, mouse.Y)); heroMoving = true; }
+													foreach (Token floorLight in floorHighlights) 
+                                                        if (floorLight.DrawRectangle.Contains(mouse.X, mouse.Y) && floorLight.Active && !floorLight.Occupied) { 
+                                                            hToken.NewSetTarget(new Vector2(floorLight.DrawRectangle.Center.X, floorLight.DrawRectangle.Center.Y)); 
+                                                            heroMoving = true; 
+                                                        }
                                                 }
                                             }
                                             #region Checking Movement Buttons
@@ -1228,39 +1232,41 @@ namespace Descent_2e_Co_Op
 											{
 												if(moveButton.DrawRectangle.Contains(mouse.X, mouse.Y)){
 													int moveValue = moveButton.Variable;
+                                                    currentHeroToken.Active = true;
+                                                    currentHeroToken.MovementPath.Clear();
+                                                    heroMoving = false;
 													if (moveValue == 1)
 													{
-														heroTokens[heroNumPosition].Location = heroTokens[heroNumPosition].OriginalLocation;
-														heroTokens[heroNumPosition].DrawRectangle = heroTokens[heroNumPosition].OriginalDrawRect;
-														heroMoving = false;
+                                                        currentHeroToken.Location = currentHeroToken.OriginalLocation;
+                                                        currentHeroToken.DrawRectangle = currentHeroToken.OriginalDrawRect;
 													}
 													else if (moveValue == 2)
-													{
-                                                        heroTokens[heroNumPosition].OriginalLocation = heroTokens[heroNumPosition].Location;
-                                                        heroTokens[heroNumPosition].OriginalDrawRect = heroTokens[heroNumPosition].DrawRectangle;
-                                                        heroMoving = false;
+                                                    {
+                                                        floorHighlights.Clear();
+                                                        currentHeroToken.OriginalLocation = currentHeroToken.Location;
+                                                        currentHeroToken.OriginalDrawRect = currentHeroToken.DrawRectangle;
                                                         choosingAction = true;
                                                         loadOnce = false;
-														foreach(Tile tile in tiles) if(heroTokens[heroNumPosition].DrawRectangle.Intersects(tile.DrawRectangle)) heroTokens[heroNumPosition].adjustPosition(tile.DrawRectangle);
-														foreach (Tile endCap in endCaps) if (heroTokens[heroNumPosition].DrawRectangle.Intersects(endCap.DrawRectangle)) heroTokens[heroNumPosition].adjustPosition(endCap.DrawRectangle);
-                                                        heroTokens[heroNumPosition].Movement -= heroTokens[heroNumPosition].MovementUsed;
+                                                        foreach (Tile tile in tiles) if (currentHeroToken.DrawRectangle.Intersects(tile.DrawRectangle)) currentHeroToken.adjustPosition(tile.DrawRectangle);
+                                                        foreach (Tile endCap in endCaps) if (currentHeroToken.DrawRectangle.Intersects(endCap.DrawRectangle)) currentHeroToken.adjustPosition(endCap.DrawRectangle);
+                                                        currentHeroToken.Movement -= currentHeroToken.MovementUsed;
                                                         currentHeroActionState = HeroActionState.ChooseAction;
                                                         currentHeroState = HeroState.SelectActions;
 													}
 													else
                                                     {
-														heroTokens[heroNumPosition].OriginalLocation = heroTokens[heroNumPosition].Location;
-														heroTokens[heroNumPosition].OriginalDrawRect = heroTokens[heroNumPosition].DrawRectangle;
-														heroMoving = false; loadOnce = false;
-														foreach (Tile tile in tiles) if (heroTokens[heroNumPosition].DrawRectangle.Intersects(tile.DrawRectangle)) heroTokens[heroNumPosition].adjustPosition(tile.DrawRectangle);
-														foreach (Tile endCap in endCaps) if (heroTokens[heroNumPosition].DrawRectangle.Intersects(endCap.DrawRectangle)) heroTokens[heroNumPosition].adjustPosition(endCap.DrawRectangle);
-                                                        if (movementPoints == 0) { movementButtons[0].Active = true; movementButtons[1].Active = true; zeroMovementPoints = false; }
-                                                        heroTokens[heroNumPosition].Movement = heroSheets[heroNumPosition].MaxMovement;
-                                                        heroTokens[heroNumPosition].MovementUsed = 0;
-                                                        zeroMovementPoints = false;
                                                         floorHighlights.Clear();
+                                                        currentHeroToken.OriginalLocation = currentHeroToken.Location;
+                                                        currentHeroToken.OriginalDrawRect = currentHeroToken.DrawRectangle; 
+                                                        loadOnce = false;
+                                                        foreach (Tile tile in tiles) if (currentHeroToken.DrawRectangle.Intersects(tile.DrawRectangle)) currentHeroToken.adjustPosition(tile.DrawRectangle);
+                                                        foreach (Tile endCap in endCaps) if (currentHeroToken.DrawRectangle.Intersects(endCap.DrawRectangle)) currentHeroToken.adjustPosition(endCap.DrawRectangle);
+                                                        if (movementPoints == 0) { movementButtons[0].Active = true; movementButtons[1].Active = true; zeroMovementPoints = false; }
+                                                        currentHeroToken.Movement = thisHeroSheet.MaxMovement;
+                                                        currentHeroToken.MovementUsed = 0;
+                                                        zeroMovementPoints = false;
                                                         thisHeroSheet.ActionPoints--;
-														checkActionPoints(heroSheets[heroNumPosition]);
+														checkActionPoints(thisHeroSheet);
 													}
 												}
                                             }
@@ -1423,6 +1429,8 @@ namespace Descent_2e_Co_Op
                                                                 reanimate.LocationX = reanimate.DrawRectangle.X + 32;
                                                                 reanimate.LocationY = reanimate.DrawRectangle.Y + 32;
                                                                 reanimate.OriginalLocation = reanimate.Location;
+                                                                reanimate.HalfDrawRectWidth = reanimate.SourceRectangle.Width / 2;
+                                                                reanimate.HalfDrawRectHeight = reanimate.SourceRectangle.Height / 2;
                                                                 messages.Clear();
                                                                 familiarActive = true;
                                                                 thisHeroSheet.ActionPoints--;
@@ -1530,7 +1538,7 @@ namespace Descent_2e_Co_Op
             for (int i = monsterTokens.Count - 1; i >= 0; i--) if (!monsterTokens[i].Active) monsterTokens.RemoveAt(i);
 
             // Update Game items
-            foreach(Token hToken in heroTokens) hToken.Update(gameTime);
+            if(heroMoving) foreach(Token hToken in heroTokens) hToken.Update2(gameTime);
             foreach(Token mToken in monsterTokens) mToken.Update(gameTime);
             //overlordTrack.Update(gameTime);
             //lootTrack.Update(gameTime);
@@ -1875,6 +1883,8 @@ namespace Descent_2e_Co_Op
                     {
                         tokenPosition.X += GameConstants.GRID_SIZE;
                         floorHighlights.Add(new Token(archeSourceRect, tokenPosition));
+                        messages.Add(new Message("x: " + floorHighlights[floorHighlights.Count - 1].DrawRectangle.Center.X + "\ny: " + floorHighlights[floorHighlights.Count - 1].DrawRectangle.Center.Y, windlassFont6,
+                            new Vector2(floorHighlights[floorHighlights.Count - 1].DrawRectangle.X, floorHighlights[floorHighlights.Count - 1].DrawRectangle.Y), x));
                     }
                     tokenPosition.Y += GameConstants.GRID_SIZE;
                     tokenPosition.X = startX;
@@ -2125,6 +2135,10 @@ namespace Descent_2e_Co_Op
             }
         }
 
+        /// <summary>
+        /// Awards a shop card to a hero when a specific number of kills have been made
+        /// </summary>
+        /// <param name="hero">The hero being awarded the gear</param>
         private void AwardShopCard(HeroSheet hero)
         {
             awardingLoot = true;

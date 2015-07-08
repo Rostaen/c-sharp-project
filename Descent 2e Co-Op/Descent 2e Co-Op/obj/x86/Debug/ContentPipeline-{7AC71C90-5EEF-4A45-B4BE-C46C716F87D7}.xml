@@ -460,6 +460,15 @@
       <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\OL Cards\forgotten souls cards.xnb</Output>
       <Time>2015-07-07T11:48:24.0563138-04:00</Time>
     </Item>
+    <Item>
+      <Source>Fonts\Windlass 6.bmp</Source>
+      <Name>Fonts\Windlass 6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>FontTextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Fonts\Windlass 6.xnb</Output>
+      <Time>2015-07-08T16:17:59.075969-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{7AC71C90-5EEF-4A45-B4BE-C46C716F87D7}</ContentProjectGUID>

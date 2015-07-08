@@ -49,3 +49,4 @@ Content\Hero_Items\hero sheets 2.xnb
 Content\Misc\black overlay.xnb
 Content\shop sheet.xnb
 Content\OL Cards\forgotten souls cards.xnb
+Content\Fonts\Windlass 6.xnb

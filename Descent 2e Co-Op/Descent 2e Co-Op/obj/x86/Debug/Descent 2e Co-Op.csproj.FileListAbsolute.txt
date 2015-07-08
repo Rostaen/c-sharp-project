@@ -323,3 +323,4 @@ C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 
 C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\obj\x86\Debug\Descent 2e Co-Op.application
 C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\shop sheet.xnb
 C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\OL Cards\forgotten souls cards.xnb
+C:\Users\faculty\Documents\Visual Studio 2010\Projects\Descent 2e Co-Op\Descent 2e Co-Op\Descent 2e Co-Op\bin\x86\Debug\Content\Fonts\Windlass 6.xnb

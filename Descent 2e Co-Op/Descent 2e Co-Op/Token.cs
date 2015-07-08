@@ -18,9 +18,10 @@ namespace Descent_2e_Co_Op
         // Graphics and drawing info
         Rectangle drawRectangle, originalDrawRect, sourceRectangle = new Rectangle();
         Vector2 location, direction = Vector2.Zero, target = Vector2.Zero, originalPosition, miniTarget = Vector2.Zero;
+        List<Vector2> movementPath = new List<Vector2>();
 
         string name = "";
-        bool active = true, clicked = false, targetReached = true, xReached = false, yReached = false, miniXReached = false, miniYReached = false, negXDir = false, negYDir = false, isMaster = false,
+        bool active = true, clicked = false, targetReached = true, xReached = false, yReached = false, negXDir = false, negYDir = false, isMaster = false,
              knockedOut = false, dead = false, hasMoved = false, occupied = false;
         bool[] conditions = { false, false, false, false }; // Conditions are as such: Poison, Disease, Stun, Immobilized
 
@@ -142,6 +143,7 @@ namespace Descent_2e_Co_Op
 
         #region Properties
 
+        public List<Vector2> MovementPath { get { return movementPath; } set { movementPath = value; } }
         public int drawRectWidth { get { return drawRectangle.Width; } set { drawRectangle.Width = value; } }
         public int SourceRectangleX { get { return sourceRectangle.X; } set { sourceRectangle.X = value; } }
         public int SourceRectangleY { get { return sourceRectangle.Y; } set { sourceRectangle.Y = value; } }
@@ -170,6 +172,8 @@ namespace Descent_2e_Co_Op
         public Rectangle DrawRectangle { get { return drawRectangle; } set { drawRectangle = value; } }
         public int DrawRectangleX { get { return drawRectangle.X; } set { drawRectangle.X = value; } }
         public int DrawRectangleY { get { return drawRectangle.Y; } set { drawRectangle.Y = value; } }
+        public int HalfDrawRectWidth { set { halfDrawRectangleWidth = value; } }
+        public int HalfDrawRectHeight { set { halfDrawRectangleHeight = value; } }
 
         /// <summary>
         /// Sets the X location of the center of the hero token
@@ -254,6 +258,127 @@ namespace Descent_2e_Co_Op
             }
         }
 
+        public void Update2(GameTime gameTime)
+        {
+            if (active)
+            {
+                if (!targetReached)
+                {
+                    location += direction * GameConstants.TOKEN_MOVE_SPEED * gameTime.ElapsedGameTime.Milliseconds;
+                    drawRectangle.X = (int)location.X - halfDrawRectangleWidth;
+                    drawRectangle.Y = (int)location.Y - halfDrawRectangleHeight;
+                    Vector2 currentTarget = movementPath[movementPath.Count - 1];
+                    if (!xReached)
+                    {
+                        if (negXDir) { if ((int)location.X - currentTarget.X <= 0) xReached = true; }
+                        else { if (currentTarget.X - (int)location.X <= 0) xReached = true; }
+                    }
+                    if (!yReached)
+                    {
+                        if (negYDir) { if ((int)location.Y - currentTarget.Y <= 0) yReached = true; }
+                        else { if (currentTarget.Y - (int)location.Y <= 0) yReached = true; }
+                    }
+                    if (xReached && yReached) { targetReached = true; negXDir = false; negYDir = false; }
+                }
+                else if(targetReached)
+                {
+                    targetReached = false;
+                    int pos = movementPath.Count - 1;
+                    if (pos > -1) movementPath.RemoveAt(movementPath.Count - 1);
+                    if (movementPath.Count != 0)
+                    {
+                        getNextDirection(movementPath);
+                        xReached = false; yReached = false;
+                        Update2(gameTime);
+                    }
+                    else active = false;
+                }
+            }
+        }
+
+        private void getNextDirection(List<Vector2> movementPath)
+        {
+            int lastSpot = movementPath.Count - 1;
+            float dirX = movementPath[lastSpot].X - location.X;
+            float dirY = movementPath[lastSpot].Y - location.Y;
+            direction = new Vector2(dirX, dirY);
+            direction.Normalize();
+        }
+
+        /// <summary>
+        /// Trying out a new recursive search to target movement spot
+        /// </summary>
+        /// <param name="target">The selected target to move too</param>
+        public void NewSetTarget(Vector2 target)
+        {
+            xReached = false; yReached = false;
+            targetReached = false;
+            this.target = target;
+
+            if (target.X - location.X < 0) { negXDir = true; }
+            if (target.Y - location.Y < 0) { negYDir = true; }
+          
+            movementPath.Add(target);
+            movementPath = checkTargetToLocation(movementPath);
+            movementPath.RemoveAt(movementPath.Count - 1);
+            setMovementUsed(movementPath.Count, 0);
+            getNextDirection(movementPath);
+        }
+
+        /// <summary>
+        /// Recursively checks a cell by cell path from the target to the current token location
+        /// </summary>
+        /// <param name="target">Current target location being checked recursively</param>
+        /// <returns>Returns: target = location ? target : updated target</returns>
+        private List<Vector2> checkTargetToLocation(List<Vector2> target)
+        {
+            int pos = target.Count -1;
+            if (target[pos].X == (int)location.X && target[pos].Y == (int)location.Y) return target;
+            else
+            {
+                if (target[pos].X - (int)location.X == 0 && target[pos].Y > (int)location.Y)
+                {
+                    target.Add(new Vector2(target[pos].X, target[pos].Y - 64));
+                    return checkTargetToLocation(target);
+                }
+                else if (target[pos].X < (int)location.X && target[pos].Y > (int)location.Y)
+                {
+                    target.Add(new Vector2(target[pos].X + 64, target[pos].Y - 64));
+                    return checkTargetToLocation(target);
+                }
+                else if (target[pos].X < (int)location.X && target[pos].Y - (int)location.Y == 0)
+                {
+                    target.Add(new Vector2(target[pos].X + 64, target[pos].Y));
+                    return checkTargetToLocation(target);
+                }
+                else if (target[pos].X < (int)location.X && target[pos].Y < (int)location.Y)
+                {
+                    target.Add(new Vector2(target[pos].X + 64, target[pos].Y + 64));
+                    return checkTargetToLocation(target);
+                }
+                else if (target[pos].X - (int)location.X == 0 && target[pos].Y < (int)location.Y)
+                {
+                    target.Add(new Vector2(target[pos].X, target[pos].Y + 64));
+                    return checkTargetToLocation(target);
+                }
+                else if (target[pos].X > (int)location.X && target[pos].Y < (int)location.Y)
+                {
+                    target.Add(new Vector2(target[pos].X - 64, target[pos].Y + 64));
+                    return checkTargetToLocation(target);
+                }
+                else if (target[pos].X > (int)location.X && target[pos].Y - (int)location.Y == 0)
+                {
+                    target.Add(new Vector2(target[pos].X - 64, target[pos].Y));
+                    return checkTargetToLocation(target);
+                }
+                else
+                {
+                    target.Add(new Vector2(target[pos].X - 64, target[pos].Y - 64));
+                    return checkTargetToLocation(target);
+                }
+            }
+        }
+
         /// <summary>
         /// Sets a target for the token to move too
         /// </summary>
@@ -295,6 +420,7 @@ namespace Descent_2e_Co_Op
 			xPosOnTile = Math.Round(xPosOnTile) * 64;
 			yPosOnTile = Math.Round(yPosOnTile) * 64;
 			drawRectangle.X = tileRect.X + (int)xPosOnTile; drawRectangle.Y = tileRect.Y + (int)yPosOnTile;
+            originalDrawRect = drawRectangle; location.X = drawRectangle.X + 32; location.Y = drawRectangle.Y + 32; OriginalLocation = location;            
 		}
 
         #endregion
