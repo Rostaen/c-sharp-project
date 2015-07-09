@@ -82,7 +82,7 @@ namespace Descent_2e_Co_Op
 			 calcAttack = true, attackHit = true, hasSurges = false, skillPicked = false, familiarActive = false, familiarActed = false, familiarAttacked = false, familiarMoved = false, 
              familiarChoosing = true, familiarActionSheetOn = true, usedSkillOnce = false, LoSFound = false, skillNotExhausted = false, awardingLoot = false;
 
-        string currentRoom = "19B", selectedHeroName = "", weaponUsed = "", familiarAction ="", theClassName = "";
+        string currentRoom = "The Onset", selectedHeroName = "", weaponUsed = "", familiarAction ="", theClassName = "";
         int numHeroTurns = 2, numHeroesPlaying = 2, creatingHeroNumber = 1, currentHeroTurn = 1, numOfHealers = 0, numOfMages = 0, numOfScouts = 0, numOfWarriors = 0, attackRange = 0, heroNumPosition = -1,
             skillUsed = -1, timer = 0, heroPlacementCount = 0, buySkill = 0, loadTokensSheets = 0, masterKillCount = 1;
 
@@ -195,8 +195,8 @@ namespace Descent_2e_Co_Op
             bar1BG = new Token(bar1BGLocation, 0, 0, 0, barBGSource); bar2BG = new Token(bar2BGLocation, 0, 0, 0, barBGSource);
 
             // Adding Yes/No buttons for familiar activation
-            yesNoList.Add(new Token(new Rectangle(0, 0, GameConstants.WINDOW_WIDTH, GameConstants.WINDOW_HEIGHT), 0, GameConstants.WINDOW_WIDTH / 2 - 25, 230, new Rectangle(400, 352, 40, 40)));
-            yesNoList.Add(new Token(new Rectangle(0, 0, GameConstants.WINDOW_WIDTH, GameConstants.WINDOW_HEIGHT), 1, GameConstants.WINDOW_WIDTH / 2 + 25, 230, new Rectangle(440, 352, 40, 40)));
+            yesNoList.Add(new Token(new Rectangle(0, 0, GameConstants.WINDOW_WIDTH, GameConstants.WINDOW_HEIGHT), 0, GameConstants.WINDOW_WIDTH / 2 - 25, 240, new Rectangle(360, 352, 40, 40)));
+            yesNoList.Add(new Token(new Rectangle(0, 0, GameConstants.WINDOW_WIDTH, GameConstants.WINDOW_HEIGHT), 1, GameConstants.WINDOW_WIDTH / 2 + 25, 240, new Rectangle(400, 352, 40, 40)));
 
             // Adding Loot track and OL track items to the game
             Texture2D lootSprite = Content.Load<Texture2D>("Misc/Loot Tracker");
@@ -624,7 +624,7 @@ namespace Descent_2e_Co_Op
                 #region Game State: Initialize Room
                 case GameState.InitializeRoom:
                     switch(currentRoom){
-                        case "19B":
+                        case "The Onset":
                             monsterTokens.Add(new Token("zombie", new Rectangle(960, 64, 64, 64), true, 0, tiles[0], GameConstants.MONSTER_LOC_19B[0, 0, 0], GameConstants.MONSTER_LOC_19B[0, 0, 1], GameConstants.ZOMBIE_FLESH_W, GameConstants.ZOMBIE_FLESH_BARGH_H, 0, 0, 0));
                             monsterTokens.Add(new Token("barghest", new Rectangle(513, 256, 128, 64), true, 3, tiles[0], GameConstants.MONSTER_LOC_19B[1, 0, 0], GameConstants.MONSTER_LOC_19B[1, 0, 1], GameConstants.BARGH_W, GameConstants.ZOMBIE_FLESH_BARGH_H, 0, 0, 0));
                             if (heroTokens.Count >= 3)
@@ -875,7 +875,7 @@ namespace Descent_2e_Co_Op
                                                 familiarChoosing = false;
                                                 familiarActionSheetOn = false;
                                                 messages.Clear();
-                                                if (floorLight.Active && !floorLight.Occupied) { heroTokens[heroTokens.Count - 1].NewSetTarget(new Vector2(floorLight.DrawRectangle.Width / 2, floorLight.DrawRectangle.Height / 2)); heroMoving = true; }
+                                                if (floorLight.Active && !floorLight.Occupied) { heroTokens[heroTokens.Count - 1].NewSetTarget(new Vector2(floorLight.DrawRectangle.Center.X, floorLight.DrawRectangle.Center.Y)); heroMoving = true; }
                                                 familiarMoved = true;
                                                 familiarAction = "";                                                
                                             }
@@ -919,6 +919,11 @@ namespace Descent_2e_Co_Op
                         case HeroState.EquipItems:
                             if (heroSheets[heroNumPosition].PickedClass.BackPack.Count > 0)
                             {
+                                if (!loadOnce)
+                                {
+                                    messages.Clear();
+                                    messages.Add(new Message("Choose what you would like to equip. When you're\ndone, click exit to finish equipping", windlassFont14, centerWindowMessage));
+                                }
                                 // TODO: Add code here to see about swapping equipment
                             }
                             else currentHeroState = HeroState.SelectActions;
@@ -968,22 +973,29 @@ namespace Descent_2e_Co_Op
 								#region Attack Action
 								case HeroActionState.AttackAction:
                                     if (!weaponPicked) { floorHighlights.Clear(); messages.Add(new Message("Select a weapon to attack with.", windlassFont23, centerWindowMessage)); }
-									if (!loadOnce) {
+									if (!loadOnce)
+                                    {
+                                        #region Loading target select message and determining range
                                         messages.Clear();
                                         messages.Add(new Message("Select a target to attack.", windlassFont23, centerWindowMessage));
-                                        DetermineRanges(attackRange, archetype, tokenPosition, "Attack"); loadOnce = true; 
+                                        DetermineRanges(attackRange, archetype, tokenPosition, "Attack"); loadOnce = true;
+                                        #endregion
                                     }
                                     if (!calcAttack && attackHit && LoSFound)
-									{
-										if (totalSurge > 0 && !loadSurgeOnce)
-										{
-											loadSurgeOnce = true;
+                                    {
+                                        #region Reviewing attack
+                                        if (totalSurge > 0 && !loadSurgeOnce)
+                                        {
+                                            #region checking surges
+                                            loadSurgeOnce = true;
 											hasSurges = true;
 											messages.Add(new Message("Number of surges to use: " + totalSurge, windlassFont14, actionWindowTop));
                                             if (removeSurgeNumber >= 0 && surgeList.Count > 0) { surgeList.RemoveAt(removeSurgeNumber); surgeList.Insert(removeSurgeNumber, ""); }
-										}
-                                        else if (totalSurge <= 0) 
-                                        { 
+                                            #endregion
+                                        }
+                                        else if (totalSurge <= 0)
+                                        {
+                                            #region post surge check, finalizing attack
                                             attackHit = false; hasSurges = false; surgeList.Clear(); surgeListRect.Clear();
                                             int rangeToTarget = DetermineDistanceLong(heroTokens[heroNumPosition], targetMonsterToken);
                                             if (totalRange >= rangeToTarget)
@@ -1001,9 +1013,11 @@ namespace Descent_2e_Co_Op
                                                 }
                                             }
                                             else attackHit = false;
+                                            #endregion
                                         }
                                         if(!awardingLoot) messages.Add(new Message("Rng: " + totalRange + " Dmg: " + totalAttack + " Srg: " + totalSurge + " Def: " + totalDefense, windlassFont23, centerWindowMessage));
-									}
+                                        #endregion
+                                    }
 									if (!calcAttack && !attackHit && totalRange == 0) messages.Add(new Message("Attack missed...", windlassFont23, centerWindowMessage));
 									if (mouse.LeftButton == ButtonState.Pressed && leftButtonReleased) { leftClickStarted = true; leftButtonReleased = false; }
 									else if (mouse.LeftButton == ButtonState.Released)
@@ -1218,14 +1232,12 @@ namespace Descent_2e_Co_Op
                                             //checkVariousItems(mouse);
                                             foreach (Token hToken in heroTokens)
                                             {
-                                                if (selectedHeroName == hToken.Name)
-                                                {
-													foreach (Token floorLight in floorHighlights) 
-                                                        if (floorLight.DrawRectangle.Contains(mouse.X, mouse.Y) && floorLight.Active && !floorLight.Occupied) { 
-                                                            hToken.NewSetTarget(new Vector2(floorLight.DrawRectangle.Center.X, floorLight.DrawRectangle.Center.Y)); 
-                                                            heroMoving = true; 
-                                                        }
-                                                }
+												foreach (Token floorLight in floorHighlights) 
+                                                    if (floorLight.DrawRectangle.Contains(mouse.X, mouse.Y) && floorLight.Active && !floorLight.Occupied && selectedHeroName == hToken.Name) { 
+                                                        hToken.NewSetTarget(new Vector2(floorLight.DrawRectangle.Center.X, floorLight.DrawRectangle.Center.Y)); 
+                                                        heroMoving = true; 
+                                                        messages.Add(new Message(hToken.Name + " used " + hToken.MovementUsed + " MP.", windlassFont14, new Vector2(20, 200), 0));
+                                                    }                                                
                                             }
                                             #region Checking Movement Buttons
                                             foreach (Token moveButton in movementButtons)
@@ -1243,8 +1255,8 @@ namespace Descent_2e_Co_Op
 													else if (moveValue == 2)
                                                     {
                                                         floorHighlights.Clear();
-                                                        currentHeroToken.OriginalLocation = currentHeroToken.Location;
-                                                        currentHeroToken.OriginalDrawRect = currentHeroToken.DrawRectangle;
+                                                        //currentHeroToken.OriginalLocation = currentHeroToken.Location;
+                                                        //currentHeroToken.OriginalDrawRect = currentHeroToken.DrawRectangle;
                                                         choosingAction = true;
                                                         loadOnce = false;
                                                         foreach (Tile tile in tiles) if (currentHeroToken.DrawRectangle.Intersects(tile.DrawRectangle)) currentHeroToken.adjustPosition(tile.DrawRectangle);
@@ -1256,8 +1268,8 @@ namespace Descent_2e_Co_Op
 													else
                                                     {
                                                         floorHighlights.Clear();
-                                                        currentHeroToken.OriginalLocation = currentHeroToken.Location;
-                                                        currentHeroToken.OriginalDrawRect = currentHeroToken.DrawRectangle; 
+                                                        //currentHeroToken.OriginalLocation = currentHeroToken.Location;
+                                                        //currentHeroToken.OriginalDrawRect = currentHeroToken.DrawRectangle; 
                                                         loadOnce = false;
                                                         foreach (Tile tile in tiles) if (currentHeroToken.DrawRectangle.Intersects(tile.DrawRectangle)) currentHeroToken.adjustPosition(tile.DrawRectangle);
                                                         foreach (Tile endCap in endCaps) if (currentHeroToken.DrawRectangle.Intersects(endCap.DrawRectangle)) currentHeroToken.adjustPosition(endCap.DrawRectangle);
@@ -1538,8 +1550,8 @@ namespace Descent_2e_Co_Op
             for (int i = monsterTokens.Count - 1; i >= 0; i--) if (!monsterTokens[i].Active) monsterTokens.RemoveAt(i);
 
             // Update Game items
-            if(heroMoving) foreach(Token hToken in heroTokens) hToken.Update2(gameTime);
-            foreach(Token mToken in monsterTokens) mToken.Update(gameTime);
+            if(heroMoving) foreach(Token hToken in heroTokens) if(selectedHeroName == hToken.Name) hToken.Update2(gameTime);
+            //foreach(Token mToken in monsterTokens) mToken.Update(gameTime);
             //overlordTrack.Update(gameTime);
             //lootTrack.Update(gameTime);
 

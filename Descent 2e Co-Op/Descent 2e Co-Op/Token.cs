@@ -17,7 +17,7 @@ namespace Descent_2e_Co_Op
 
         // Graphics and drawing info
         Rectangle drawRectangle, originalDrawRect, sourceRectangle = new Rectangle();
-        Vector2 location, direction = Vector2.Zero, target = Vector2.Zero, originalPosition, miniTarget = Vector2.Zero;
+        Vector2 location, direction = Vector2.Zero, target = Vector2.Zero, originalPosition, currentTarget = Vector2.Zero;
         List<Vector2> movementPath = new List<Vector2>();
 
         string name = "";
@@ -220,6 +220,20 @@ namespace Descent_2e_Co_Op
         #region Public Methods
 
         /// <summary>
+        /// Adjusts the token after moving to be centered on the tile correctly. This method was developed to deal with the tokens being slightly askew after moving.
+        /// </summary>
+        /// <param name="tileRect">The tile the token is currently sitting on</param>
+        public void adjustPosition(Rectangle tileRect)
+        {
+            double xPosOnTile = drawRectangle.X - tileRect.X, yPosOnTile = drawRectangle.Y - tileRect.Y;
+            xPosOnTile /= 64; yPosOnTile /= 64;
+            xPosOnTile = Math.Round(xPosOnTile) * 64;
+            yPosOnTile = Math.Round(yPosOnTile) * 64;
+            drawRectangle.X = (int)tileRect.X + (int)xPosOnTile; drawRectangle.Y = (int)tileRect.Y + (int)yPosOnTile;
+            originalDrawRect = drawRectangle; location.X = drawRectangle.X + 32; location.Y = drawRectangle.Y + 32; OriginalLocation = location;
+        }
+
+        /// <summary>
         /// Draws the hero token
         /// </summary>
         /// <param name="spriteBatch">The sprite batch to use</param>
@@ -229,56 +243,134 @@ namespace Descent_2e_Co_Op
         }
 
         /// <summary>
+        /// Gets the direction for the token to move while updating
+        /// </summary>
+        /// <param name="movementPath">The determined path to move</param>
+        private void getNextDirection(List<Vector2> movementPath)
+        {
+            int lastSpot = movementPath.Count - 1;
+            currentTarget = movementPath[lastSpot];
+            float dirX = movementPath[lastSpot].X - location.X;
+            float dirY = movementPath[lastSpot].Y - location.Y;
+            direction = new Vector2(dirX, dirY);
+            direction.Normalize();
+        }
+
+        /// <summary>
+        /// Trying out a new recursive search to target movement spot
+        /// </summary>
+        /// <param name="target">The selected target to move too</param>
+        public void NewSetTarget(Vector2 target)
+        {
+            xReached = false; yReached = false;
+            targetReached = false;
+            this.target = target;
+
+            negXDir = false; negYDir = false;
+            checkDirections(target, location);
+
+            movementPath.Add(target);
+            movementPath = checkTargetToLocation(movementPath);
+            movementPath.RemoveAt(movementPath.Count - 1);
+            movementUsed = movementPath.Count;
+            //setMovementUsed(movementPath.Count, 0);
+            getNextDirection(movementPath);
+        }
+
+        /// <summary>
+        /// Sets a target for the token to move too
+        /// </summary>
+        /// <param name="target">The vector location tile target location</param>
+        //public void SetTarget(Vector2 target)
+        //{
+        //    xReached = false; yReached = false;
+        //    bool xGood = false, yGood = false;
+        //    Vector2 tempTarget;
+        //    targetReached = false;
+
+        //    this.target = target;
+        //    target -= location;
+
+        //    if (target.X < 0) { tempTarget.X = target.X * -1; negXDir = true; }
+        //    else tempTarget.X = target.X; 
+        //    if (target.Y < 0) { tempTarget.Y = target.Y * -1; negYDir = true; }
+        //    else tempTarget.Y = target.Y;
+        //    if (tempTarget.X > 32) xGood = true;
+        //    if (tempTarget.Y > 32) yGood = true;
+
+        //    if (xGood || yGood)
+        //    {
+        //        float xBox = checkDistance(target.X), yBox = checkDistance(target.Y);
+        //        if (xBox == 0) xReached = true;
+        //        else if (yBox == 0) yReached = true;
+        //        setMovementUsed(xBox, yBox);
+        //        direction.X = xBox; direction.Y = yBox;
+        //        direction.Normalize();
+        //        this.target.X = xBox + location.X;
+        //        this.target.Y = yBox + location.Y;
+        //    }
+        //}
+
+        /// <summary>
         /// Updates the hero token around the board based on where the mouse is clicked
         /// </summary>
         /// <param name="gameTime">The game time</param>
         /// <param name="mouse">The current state of the mouse (to get X/Y position for movement)</param>
-        public void Update(GameTime gameTime)
-        {
-            if (active)
-            {
-                if (!targetReached)
-                {
-                    location += direction * GameConstants.TOKEN_MOVE_SPEED * gameTime.ElapsedGameTime.Milliseconds;
-                    drawRectangle.X = (int)location.X - halfDrawRectangleWidth;
-                    drawRectangle.Y = (int)location.Y - halfDrawRectangleHeight;
+        //public void Update(GameTime gameTime)
+        //{
+        //    if (active)
+        //    {
+        //        if (!targetReached)
+        //        {
+        //            location += direction * GameConstants.TOKEN_MOVE_SPEED * gameTime.ElapsedGameTime.Milliseconds;
+        //            drawRectangle.X = (int)location.X - halfDrawRectangleWidth;
+        //            drawRectangle.Y = (int)location.Y - halfDrawRectangleHeight;
 
-                    if (!xReached)
-                    {
-                        if (negXDir) { if (location.X - target.X <= 0) xReached = true; } 
-                        else { if (target.X - location.X <= 0) xReached = true; }
-                    }
-                    if (!yReached)
-                    {
-                        if (negYDir) { if (location.Y - target.Y <= 0) yReached = true; }
-                        else { if (target.Y - location.Y <= 0) yReached = true; }
-                    }
-					if (xReached && yReached) { targetReached = true; negXDir = false; negYDir = false; }
-                }
-            }
-        }
+        //            if (!xReached)
+        //            {
+        //                if (negXDir) { if (location.X - target.X <= 0) xReached = true; } 
+        //                else { if (target.X - location.X <= 0) xReached = true; }
+        //            }
+        //            if (!yReached)
+        //            {
+        //                if (negYDir) { if (location.Y - target.Y <= 0) yReached = true; }
+        //                else { if (target.Y - location.Y <= 0) yReached = true; }
+        //            }
+        //            if (xReached && yReached) { targetReached = true; negXDir = false; negYDir = false; }
+        //        }
+        //    }
+        //}
 
+        /// <summary>
+        /// Moves the token over a period of time
+        /// </summary>
+        /// <param name="gameTime">Current game time</param>
         public void Update2(GameTime gameTime)
         {
             if (active)
             {
+                checkDirections(target, location);
                 if (!targetReached)
                 {
                     location += direction * GameConstants.TOKEN_MOVE_SPEED * gameTime.ElapsedGameTime.Milliseconds;
                     drawRectangle.X = (int)location.X - halfDrawRectangleWidth;
                     drawRectangle.Y = (int)location.Y - halfDrawRectangleHeight;
-                    Vector2 currentTarget = movementPath[movementPath.Count - 1];
                     if (!xReached)
                     {
-                        if (negXDir) { if ((int)location.X - currentTarget.X <= 0) xReached = true; }
-                        else { if (currentTarget.X - (int)location.X <= 0) xReached = true; }
+                        if (negXDir) { 
+                            if ((int)location.X - currentTarget.X <= 0) xReached = true; }
+                        else { 
+                            if (currentTarget.X - (int)location.X <= 0) xReached = true; }
                     }
                     if (!yReached)
                     {
-                        if (negYDir) { if ((int)location.Y - currentTarget.Y <= 0) yReached = true; }
-                        else { if (currentTarget.Y - (int)location.Y <= 0) yReached = true; }
+                        if (negYDir) { 
+                            if ((int)location.Y - currentTarget.Y <= 0) yReached = true; }
+                        else { 
+                            if (currentTarget.Y - (int)location.Y <= 0) yReached = true; }
                     }
-                    if (xReached && yReached) { targetReached = true; negXDir = false; negYDir = false; }
+                    if (xReached && yReached) { 
+                        targetReached = true; negXDir = false; negYDir = false; }
                 }
                 else if(targetReached)
                 {
@@ -296,33 +388,19 @@ namespace Descent_2e_Co_Op
             }
         }
 
-        private void getNextDirection(List<Vector2> movementPath)
-        {
-            int lastSpot = movementPath.Count - 1;
-            float dirX = movementPath[lastSpot].X - location.X;
-            float dirY = movementPath[lastSpot].Y - location.Y;
-            direction = new Vector2(dirX, dirY);
-            direction.Normalize();
-        }
+        #endregion
+
+        #region Private Methods
 
         /// <summary>
-        /// Trying out a new recursive search to target movement spot
+        /// Used to determine if a token is moving in a negative X/Y direction
         /// </summary>
-        /// <param name="target">The selected target to move too</param>
-        public void NewSetTarget(Vector2 target)
+        /// <param name="target">Where to move too</param>
+        /// <param name="location">Where the token currently is</param>
+        private void checkDirections(Vector2 target, Vector2 location)
         {
-            xReached = false; yReached = false;
-            targetReached = false;
-            this.target = target;
-
             if (target.X - location.X < 0) { negXDir = true; }
             if (target.Y - location.Y < 0) { negYDir = true; }
-          
-            movementPath.Add(target);
-            movementPath = checkTargetToLocation(movementPath);
-            movementPath.RemoveAt(movementPath.Count - 1);
-            setMovementUsed(movementPath.Count, 0);
-            getNextDirection(movementPath);
         }
 
         /// <summary>
@@ -332,7 +410,7 @@ namespace Descent_2e_Co_Op
         /// <returns>Returns: target = location ? target : updated target</returns>
         private List<Vector2> checkTargetToLocation(List<Vector2> target)
         {
-            int pos = target.Count -1;
+            int pos = target.Count - 1;
             if (target[pos].X == (int)location.X && target[pos].Y == (int)location.Y) return target;
             else
             {
@@ -379,54 +457,7 @@ namespace Descent_2e_Co_Op
             }
         }
 
-        /// <summary>
-        /// Sets a target for the token to move too
-        /// </summary>
-        /// <param name="target">The vector location tile target location</param>
-        public void SetTarget(Vector2 target)
-        {
-            xReached = false; yReached = false;
-            bool xGood = false, yGood = false;
-            Vector2 tempTarget;
-            targetReached = false;
-
-            this.target = target;
-            target -= location;
-
-            if (target.X < 0) { tempTarget.X = target.X * -1; negXDir = true; }
-            else tempTarget.X = target.X; 
-            if (target.Y < 0) { tempTarget.Y = target.Y * -1; negYDir = true; }
-            else tempTarget.Y = target.Y;
-            if (tempTarget.X > 32) xGood = true;
-            if (tempTarget.Y > 32) yGood = true;
-
-            if (xGood || yGood)
-            {
-                float xBox = checkDistance(target.X), yBox = checkDistance(target.Y);
-                if (xBox == 0) xReached = true;
-                else if (yBox == 0) yReached = true;
-                setMovementUsed(xBox, yBox);
-                direction.X = xBox; direction.Y = yBox;
-                direction.Normalize();
-                this.target.X = xBox + location.X;
-                this.target.Y = yBox + location.Y;
-            }
-        }
-
-		public void adjustPosition(Rectangle tileRect)
-		{
-			double xPosOnTile = drawRectangle.X - tileRect.X, yPosOnTile = drawRectangle.Y - tileRect.Y;
-			xPosOnTile /= 64; yPosOnTile /= 64;
-			xPosOnTile = Math.Round(xPosOnTile) * 64;
-			yPosOnTile = Math.Round(yPosOnTile) * 64;
-			drawRectangle.X = tileRect.X + (int)xPosOnTile; drawRectangle.Y = tileRect.Y + (int)yPosOnTile;
-            originalDrawRect = drawRectangle; location.X = drawRectangle.X + 32; location.Y = drawRectangle.Y + 32; OriginalLocation = location;            
-		}
-
-        #endregion
-
-        #region Private Methods
-
+        // TODO: Outdated? Keep : Delete
         private void setMovementUsed(float xBox, float yBox)
         {
             if (xBox < 0) xBox *= -1;
