@@ -14,7 +14,7 @@ namespace Descent_2e_Co_Op
         #region Fields
 
         string name = "", type = "", trait1 = "", trait2 = "", bonus1 = "", bonus2 = "", surge1 = "", surge2 = "", surge3 = "";
-        bool surge1Used = false, surge2Used = false, surge3Used = false, offHandExhausted = false;
+        bool offHandExhausted = false, startingGear = false, slotUsed = false;
         int cost = 0, hands = 1, dice1 = 0, dice2 = 0, dice3 = 0, def1 = -1;
         Rectangle equipmentSpriteRect, sourceRectangle;
 
@@ -86,80 +86,40 @@ namespace Descent_2e_Co_Op
 
         #region Properties
 
-        public Rectangle EquipmentSpriteRect
-        {
-            get { return equipmentSpriteRect; }
-            set { equipmentSpriteRect = value; }
-        }
+        #region Rectangles
+        public Rectangle EquipmentSpriteRect { get { return equipmentSpriteRect; } set { equipmentSpriteRect = value; } }
+        public Rectangle DrawRectangle { get { return equipmentSpriteRect; } set { equipmentSpriteRect = value; } }
+        public Rectangle SourceRect { get { return sourceRectangle; } set { sourceRectangle = value; } }
+        #endregion
 
         #region String Properties
 
-        public string Name { get { return name; } }
-        public string Type { get { return type; } }
-        public string Trait1 { get { return trait1; } }
-        public string Trait2 { get { return trait2; } } 
-        public string Bonus1 { get { return bonus1; } }
+        public string Name { get { return name; } set { name = value; } }
+        public string Type { get { return type; } set { type = value; } }
+        public string Trait1 { get { return trait1; } set { trait1 = value; } }
+        public string Trait2 { get { return trait2; } set { trait2 = value; } }
+        public string Bonus1 { get { return bonus1; } set { bonus1 = value; } }
         public string Bonus2 { get { return bonus2; } set { bonus2 = value; } }
-        public string Surge1 { get { return surge1; } } 
-        public string Surge2 { get { return surge2; } }
-        public string Surge3 { get { return surge3; } }
+        public string Surge1 { get { return surge1; } set { surge1 = value; } }
+        public string Surge2 { get { return surge2; } set { surge2 = value; } }
+        public string Surge3 { get { return surge3; } set { surge3 = value; } }
 
         #endregion
 
         #region Int Properties
 
-        public int Cost
-        {
-            get { return cost; }
-        }
-
-        public int Hands
-        {
-            get { return hands; }
-        }
-
-        public int Dice1
-        {
-            get { return dice1; }
-        }
-
-        public int Dice2
-        {
-            get { return dice2; }
-        }
-
-        public int Dice3
-        {
-            get { return dice3; }
-        }
+        public int Cost { get { return cost; } }
+        public int Hands { get { return hands; } set { hands = value; } }
+        public int Dice1 { get { return dice1; } set { dice1 = value; } }
+        public int Dice2 { get { return dice2; } set { dice2 = value; } }
+        public int Dice3 { get { return dice3; } set { dice3 = value; } }
 
         #endregion
 
         #region Bool Properties
-
-        public bool Surge1Used
-        {
-            get { return surge1Used; }
-            set { surge1Used = value; }
-        }
-
-        public bool Surge2Used
-        {
-            get { return surge2Used; }
-            set { surge2Used = value; }
-        }
-
-        public bool Surge3Used
-        {
-            get { return surge3Used; }
-            set { surge3Used = value; }
-        }
-
-        public bool OffHandExhausted
-        {
-            get { return offHandExhausted; }
-            set { offHandExhausted = value; }
-        }
+        public bool SlotUsed { get { return slotUsed; } set { slotUsed = value; } }
+        public bool StartingGear { get { return startingGear; } set { startingGear = value; } }
+        public bool OffHandExhausted { get { return offHandExhausted; } set { offHandExhausted = value; } }
 
         #endregion
 

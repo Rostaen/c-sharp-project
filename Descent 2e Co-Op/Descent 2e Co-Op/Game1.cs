@@ -78,17 +78,17 @@ namespace Descent_2e_Co_Op
         // Various Items
 		bool heroTokenClicked = false, monsterTokenClicked = false, leftClickStarted = false, leftButtonReleased = true,
 			 barghestFound = false, fleshFound = false, dragonFound = false, zombieFound = false, finishedSelectingHeroes = false, 
-			 createdStep1 = false, loadOnce = false, loadSurgeOnce = false, heroMoving = false, searchTokenClicked = false, searchedOnce = false, weaponPicked = false,
+			 createdStep1 = false, loadedOnce = false, loadSurgeOnce = false, heroMoving = false, searchTokenClicked = false, searchedOnce = false, weaponPicked = false,
 			 calcAttack = true, attackHit = true, hasSurges = false, skillPicked = false, familiarActive = false, familiarActed = false, familiarAttacked = false, familiarMoved = false, 
-             familiarChoosing = true, familiarActionSheetOn = true, usedSkillOnce = false, LoSFound = false, skillNotExhausted = false, awardingLoot = false;
+             familiarChoosing = true, familiarActionSheetOn = true, usedSkillOnce = false, LoSFound = false, skillNotExhausted = false, awardingLoot = false, selectionNeeded = false;
 
         string currentRoom = "The Onset", selectedHeroName = "", weaponUsed = "", familiarAction ="", theClassName = "";
         int numHeroTurns = 2, numHeroesPlaying = 2, creatingHeroNumber = 1, currentHeroTurn = 1, numOfHealers = 0, numOfMages = 0, numOfScouts = 0, numOfWarriors = 0, attackRange = 0, heroNumPosition = -1,
-            skillUsed = -1, timer = 0, heroPlacementCount = 0, buySkill = 0, loadTokensSheets = 0, masterKillCount = 1;
+            skillUsed = -1, timer = 0, heroPlacementCount = 0, buySkill = 0, loadTokensSheets = 0, masterKillCount = 1, listIndex = -1;
 
         Card awardedCardHold;
 
-        Equipment attackingWeapon;
+        Equipment attackingWeapon, tempEquipHold, tempEquipHold2;
 
         // Message and other window items
         Vector2 centerWindowMessage = new Vector2(GameConstants.HALF_WINDOW_WIDTH(), GameConstants.WINDOW_HEIGHT * 0.25f);
@@ -367,7 +367,7 @@ namespace Descent_2e_Co_Op
                         string archetypeName = GetArchetypeName();
 						bool ashPicked = false, avPicked = false, leoPicked = false, tarPicked = false, jainPicked = false, tomPicked = false, grisPicked = false, synPicked = false;
                         messages.Add(new Message("Choose A " + archetypeName + " Hero", windlassFont36, new Vector2(creationRec.X + creationRec.Width / 2, (int)(creationRec.Y + creationRec.Height * 0.25))));
-                        if (!loadOnce)
+                        if (!loadedOnce)
                         {
 							for (int x = 0; x < chosenHeroName.Count; x++)
 							{
@@ -412,7 +412,7 @@ namespace Descent_2e_Co_Op
                                 if (!synPicked) chooseHero.Add(new Token(creationRec, 8, (int)(creationRec.Width * 0.55f), (int)(creationRec.Height * 0.333f), new Rectangle(0, 768, 320, 256)));
                                 else chooseHero.Add(new Token(creationRec, 8, (int)(creationRec.Width * 0.55f), (int)(creationRec.Height * 0.333f), new Rectangle(320, 768, 320, 256)));
                             }
-                            loadOnce = true;
+                            loadedOnce = true;
 							foreach (Token hSheet in chooseHero) { foreach (int chosenHero in chosenHeroName) if (chosenHero == hSheet.Variable) hSheet.Active = false; }
                         }
                         if (mouse.LeftButton == ButtonState.Pressed && leftButtonReleased) { leftClickStarted = true; leftButtonReleased = false; }
@@ -424,7 +424,7 @@ namespace Descent_2e_Co_Op
                                 leftClickStarted = false;
                                 foreach (Token chosenHero in chooseHero) { if (chosenHero.DrawRectangle.Contains(mouse.X, mouse.Y) && chosenHero.Active) { chosenHeroName[creatingHeroNumber - 1] = chosenHero.Variable; creationStep = 4; messages.Clear(); } }
                                 foreach (Token choseHero in chooseHero) choseHero.Active = false;
-                                chooseHero.Clear(); loadOnce = false; 
+                                chooseHero.Clear(); loadedOnce = false; 
                             }
                         }
                     }
@@ -436,7 +436,7 @@ namespace Descent_2e_Co_Op
 						bool ssPicked = false, dePicked = false, rmPicked = false, necPicked = false, thPicked = false, wlPicked = false, bsPicked = false, knPicked = false;
                         messages.Add(new Message("Choose A " + archetypeName + " Class", windlassFont36, new Vector2(creationRec.X + creationRec.Width / 2, (int)(creationRec.Y + creationRec.Height * 0.25))));
                         #region Hero Classes
-                        if (!loadOnce)
+                        if (!loadedOnce)
                         {
 							for (int x = 0; x < chosenHeroClass.Count; x++)
 							{
@@ -489,7 +489,7 @@ namespace Descent_2e_Co_Op
                                 messages.Add(new Message("Berserker - <insert class definition here>", windlassFont14, new Vector2(GameConstants.HALF_WINDOW_WIDTH(), creationRec.Height / 2)));
                                 messages.Add(new Message("Knight - <insert class definition here>", windlassFont14, new Vector2(GameConstants.HALF_WINDOW_WIDTH(), creationRec.Height * 0.7f)));
                             }
-                            loadOnce = true;
+                            loadedOnce = true;
 							foreach (Token pickClass in chooseClass) { foreach (int pickedClass in chosenHeroClass) if (pickedClass == pickClass.Variable) pickClass.Active = false; }
                         }
                         #endregion
@@ -502,7 +502,7 @@ namespace Descent_2e_Co_Op
                                 leftClickStarted = false;
                                 foreach (Token chosenClass in chooseClass) { if (chosenClass.DrawRectangle.Contains(mouse.X, mouse.Y) && chosenClass.Active) { chosenHeroClass[creatingHeroNumber - 1] = chosenClass.Variable; messages.Clear(); creatingHeroNumber++; creationStep = 2; } }
                                 foreach (Token chosenClass in chooseClass) chosenClass.Active = false;
-                                chooseClass.Clear(); loadOnce = false; 
+                                chooseClass.Clear(); loadedOnce = false; 
                             }
                         }
                     }
@@ -578,11 +578,11 @@ namespace Descent_2e_Co_Op
                                 else if (numHeroTurns == 4) { foreach (Token olToken in overlordTokens) if (olToken.Name == "doom") olToken.X = overlordTrack.DrawRectangle.X + overlordTrack.DrawRectangle.Width - 225; }
                             }
                         }
-                        if (!loadOnce)
+                        if (!loadedOnce)
                         {
                             messages.Add(new Message(heroSheets[buySkill].Name + " has 1 EXP to start the quest with. Either select\na skill to spend it OR hit End to store it.", windlassFont14, centerWindowMessage));
                             foreach (Token skillCard in heroSheets[buySkill].PickedClass.AllSkillCards) skillCard.Active = true;
-                            loadOnce = true;
+                            loadedOnce = true;
                         }
                         if (mouse.LeftButton == ButtonState.Pressed && leftButtonReleased) { leftClickStarted = true; leftButtonReleased = false; }
                         else if (mouse.LeftButton == ButtonState.Released)
@@ -603,7 +603,7 @@ namespace Descent_2e_Co_Op
                                             else secondSkill = new Rectangle(GameConstants.MAIN_SKILL_LOC_X + GameConstants.MAIN_SKILL_BUFFER_X, GameConstants.WINDOW_HEIGHT - 192, 128, 192);
                                             heroSheets[buySkill].PickedClass.SkillList.Add(new Token(secondSkill, theVariable, 0, 0, skillCard.SourceRectangle));
                                             messages.Clear();
-                                            buySkill++; loadOnce = false;
+                                            buySkill++; loadedOnce = false;
                                         }
                                         else messages.Add(new Message("That skill is to expensive to purchase right now, choose again.", windlassFont14, new Vector2(centerWindowMessage.X, centerWindowMessage.Y - 50)));
                                     }
@@ -612,7 +612,7 @@ namespace Descent_2e_Co_Op
                                     messages.Clear();
                                     heroSheets[buySkill].PickedClass.CurrentExp++;
                                     messages.Add(new Message(heroSheets[buySkill].Name + " has stored the EXP for later.", windlassFont14, new Vector2(centerWindowMessage.X, centerWindowMessage.Y = 50)));
-                                    buySkill++; loadOnce = false;                                    
+                                    buySkill++; loadedOnce = false;                                    
                                 }
                             }
                         }
@@ -662,10 +662,10 @@ namespace Descent_2e_Co_Op
                 #region Game State: Place Hero Starting Positions
                 case GameState.StartingPositions:
                     int placeX = tiles[0].X + 128, placeY = tiles[0].Y;
-                    if (!loadOnce)
+                    if (!loadedOnce)
                     {
                         for (int y = 0; y < 3; y++) { for (int x = 0; x < 2; x++) { floorHighlights.Add(new Token(new Rectangle(704, 0, 64, 64), new Rectangle(placeX + (x * 64), placeY + (y * 64), 64, 64))); } }
-                        loadOnce = true;
+                        loadedOnce = true;
                     }
                     messages.Add(new Message("Place " + heroSheets[heroPlacementCount].Name + " in a red starting square.", windlassFont23, centerWindowMessage));
                     if (mouse.LeftButton == ButtonState.Pressed && leftButtonReleased) { leftClickStarted = true; leftButtonReleased = false; }
@@ -690,7 +690,7 @@ namespace Descent_2e_Co_Op
                             }
                         }
                     }
-                    if (heroPlacementCount >= numHeroesPlaying) { currentGameState = GameState.HeroTurn; loadOnce = false; floorHighlights.Clear(); }
+                    if (heroPlacementCount >= numHeroesPlaying) { currentGameState = GameState.HeroTurn; loadedOnce = false; floorHighlights.Clear(); }
                     break;
                 #endregion
                 #region Game State: Hero Turn
@@ -769,12 +769,12 @@ namespace Descent_2e_Co_Op
                         case HeroState.FamiliarActions:
                             choosingAction = false;
                             Token target;
-                            if (!loadOnce)
+                            if (!loadedOnce)
                             {
                                 foreach (Token action in actionButtons) action.Active = false;
                                 actionButtons[0].Active = true;
                                 actionButtons[2].Active = true;
-                                loadOnce = true;
+                                loadedOnce = true;
                             }
                             else familiarAttacked = true;
 
@@ -893,7 +893,7 @@ namespace Descent_2e_Co_Op
                                         if (familiarAttacked && familiarMoved)
                                         {
                                             familiarActed = true;
-                                            messages.Clear(); floorHighlights.Clear(); loadOnce = false; heroMoving = false;
+                                            messages.Clear(); floorHighlights.Clear(); loadedOnce = false; heroMoving = false;
                                             foreach (Token action in actionButtons) action.Active = true;
                                             ClearDiceRolls();
                                             checkActionPoints(heroSheets[heroNumPosition]);
@@ -917,14 +917,131 @@ namespace Descent_2e_Co_Op
                         #endregion
                         #region Equip Items
                         case HeroState.EquipItems:
+                            HeroClass thatHeroClass = heroSheets[heroNumPosition].PickedClass;
                             if (heroSheets[heroNumPosition].PickedClass.BackPack.Count > 0)
                             {
-                                if (!loadOnce)
+                                if (!loadedOnce)
                                 {
                                     messages.Clear();
                                     messages.Add(new Message("Choose what you would like to equip. When you're\ndone, click exit to finish equipping", windlassFont14, centerWindowMessage));
+                                    loadedOnce = true;
                                 }
-                                // TODO: Add code here to see about swapping equipment
+                                if (mouse.LeftButton == ButtonState.Pressed && leftButtonReleased) { leftClickStarted = true; leftButtonReleased = false; }
+                                else if (mouse.LeftButton == ButtonState.Released)
+                                {
+                                    leftButtonReleased = true;
+                                    if (leftClickStarted)
+                                    {
+                                        leftClickStarted = false;
+                                        foreach (Equipment bagItem in thatHeroClass.BackPack)
+                                        {
+                                            if (bagItem.DrawRectangle.Contains(mouse.X, mouse.Y))
+                                            {
+                                                listIndex = thatHeroClass.BackPack.IndexOf(bagItem);
+                                                if (bagItem.Type == "melee" || bagItem.Type == "range" || bagItem.Type == "shield")
+                                                {
+                                                    if (bagItem.Hands == 1)
+                                                    {
+                                                        if (thatHeroClass.NumHandsUsed == 1 && bagItem.Type == "melee")
+                                                        {
+                                                            if (thatHeroClass.CurrentWeapon.SlotUsed && !thatHeroClass.OffHand.SlotUsed) thatHeroClass.AddNewItem(bagItem, "off hand");
+                                                            else thatHeroClass.AddNewItem(bagItem, "main");
+                                                        }
+                                                        else if (thatHeroClass.NumHandsUsed == 1 && bagItem.Type == "shield")
+                                                        {
+                                                            if (!thatHeroClass.OffHand.SlotUsed) thatHeroClass.OffHand = bagItem;
+                                                            else
+                                                            {
+                                                                tempEquipHold2 = thatHeroClass.OffHand;
+                                                                thatHeroClass.AddNewItem(bagItem, "shield");
+                                                            }
+                                                        }
+                                                        else if (thatHeroClass.NumHandsUsed == 2)
+                                                        {
+                                                            if (bagItem.Type == "melee")
+                                                            {
+                                                                if (thatHeroClass.CurrentWeapon.Hands == 2)
+                                                                {
+                                                                    tempEquipHold2 = thatHeroClass.CurrentWeapon;
+                                                                    thatHeroClass.AddNewItem(bagItem, "main");
+                                                                }
+                                                                else
+                                                                {
+                                                                    messages.Add(new Message("Click an equiped weapon to replace.", windlassFont14, new Vector2(centerWindowMessage.X, centerWindowMessage.Y + 60)));
+                                                                    selectionNeeded = true;
+                                                                    tempEquipHold = bagItem;
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                if (thatHeroClass.CurrentWeapon.Hands == 2) tempEquipHold2 = thatHeroClass.CurrentWeapon;
+                                                                else tempEquipHold2 = thatHeroClass.OffHand;
+                                                                thatHeroClass.AddNewItem(bagItem, "shield");
+                                                            }
+                                                        }
+                                                    }
+                                                    else // Bag item uses 2 hands
+                                                    {
+                                                        if (thatHeroClass.CurrentWeapon.SlotUsed) tempEquipHold2 = thatHeroClass.CurrentWeapon;
+                                                        if (thatHeroClass.OffHand != null) tempEquipHold2 = thatHeroClass.OffHand;
+                                                        thatHeroClass.AddNewItem(bagItem, "main");
+                                                    }
+                                                }
+                                                else if (bagItem.Type == "armor")
+                                                {
+                                                    if (thatHeroClass.Armor.SlotUsed)
+                                                    {
+                                                        tempEquipHold2 = thatHeroClass.Armor;
+                                                        thatHeroClass.AddNewItem(bagItem, "armor");
+                                                    }
+                                                    else thatHeroClass.Armor = bagItem;
+                                                }
+                                                else if (bagItem.Type == "trinket")
+                                                {
+                                                    if (!thatHeroClass.Trinket1.SlotUsed && !thatHeroClass.Trinket2.SlotUsed) thatHeroClass.Trinket1 = bagItem;
+                                                    else if (!thatHeroClass.Trinket1.SlotUsed && thatHeroClass.Trinket2.SlotUsed) thatHeroClass.Trinket1 = bagItem;
+                                                    else if (thatHeroClass.Trinket1.SlotUsed && !thatHeroClass.Trinket2.SlotUsed) thatHeroClass.Trinket2 = bagItem;
+                                                    else
+                                                    {
+                                                        messages.Add(new Message("Click an equipped trinket to replace.", windlassFont14, new Vector2(centerWindowMessage.X, centerWindowMessage.Y + 60)));
+                                                        selectionNeeded = true;
+                                                        tempEquipHold = bagItem;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        if (selectionNeeded)
+                                        {
+                                            listIndex = thatHeroClass.BackPack.IndexOf(tempEquipHold);
+                                            if (thatHeroClass.CurrentWeapon.DrawRectangle.Contains(mouse.X, mouse.Y))
+                                            {
+                                                tempEquipHold2 = thatHeroClass.CurrentWeapon;
+                                                thatHeroClass.AddNewItem(tempEquipHold, "main");
+                                            }
+                                            else if (thatHeroClass.OffHand.DrawRectangle.Contains(mouse.X, mouse.Y))
+                                            {
+                                                tempEquipHold2 = thatHeroClass.OffHand;
+                                                thatHeroClass.AddNewItem(tempEquipHold, "off hand");
+                                            }
+                                            else if (thatHeroClass.Trinket1.DrawRectangle.Contains(mouse.X, mouse.Y))
+                                            {
+                                                tempEquipHold2 = thatHeroClass.Trinket1;
+                                                thatHeroClass.AddNewItem(tempEquipHold, "trinket 1");
+                                            }
+                                            else
+                                            {
+                                                tempEquipHold2 = thatHeroClass.Trinket2;
+                                                thatHeroClass.AddNewItem(tempEquipHold, "trinket 2");
+                                            }
+                                            messages.RemoveAt(messages.Count - 1);
+                                        }
+                                        if (endToken.DrawRectangle.Contains(mouse.X, mouse.Y))
+                                        {
+                                            if (!selectionNeeded) thatHeroClass.BackPack.RemoveAt(listIndex); messages.Clear(); currentHeroState = HeroState.SelectActions;
+                                            thatHeroClass.BackPack.Add(tempEquipHold2);
+                                        }
+                                    }
+                                }
                             }
                             else currentHeroState = HeroState.SelectActions;
                             break;
@@ -948,8 +1065,8 @@ namespace Descent_2e_Co_Op
                                     {
                                         if (actButton.DrawRectangle.Contains(mouse.X, mouse.Y))
                                         {
-                                            selectedActionNumber = actButton.Variable; loadOnce = false;
-                                            if (selectedActionNumber == 1) { loadOnce = true; floorHighlights.Clear(); }
+                                            selectedActionNumber = actButton.Variable; loadedOnce = false;
+                                            if (selectedActionNumber == 1) { loadedOnce = true; floorHighlights.Clear(); }
                                             GetHeroActionState(selectedActionNumber);
                                             choosingAction = false;
                                             currentHeroState = HeroState.PerformAction;
@@ -963,22 +1080,22 @@ namespace Descent_2e_Co_Op
                         #endregion
                         #region Performing the Action
                         case HeroState.PerformAction:
-							Rectangle tokenPosition = heroTokens[heroNumPosition].DrawRectangle;
+                            Rectangle tokenPosition = heroTokens[heroNumPosition].DrawRectangle;
                             HeroSheet thisHeroSheet = heroSheets[heroNumPosition];
                             HeroClass currentHeroClass = heroSheets[heroNumPosition].PickedClass;
                             Token currentHeroToken = heroTokens[heroNumPosition];
-							string archetype = heroSheets[heroNumPosition].Archetype;
+                            string archetype = heroSheets[heroNumPosition].Archetype;
                             switch (currentHeroActionState)
 							{
 								#region Attack Action
 								case HeroActionState.AttackAction:
                                     if (!weaponPicked) { floorHighlights.Clear(); messages.Add(new Message("Select a weapon to attack with.", windlassFont23, centerWindowMessage)); }
-									if (!loadOnce)
+									if (!loadedOnce)
                                     {
                                         #region Loading target select message and determining range
                                         messages.Clear();
                                         messages.Add(new Message("Select a target to attack.", windlassFont23, centerWindowMessage));
-                                        DetermineRanges(attackRange, archetype, tokenPosition, "Attack"); loadOnce = true;
+                                        DetermineRanges(attackRange, archetype, tokenPosition, "Attack"); loadedOnce = true;
                                         #endregion
                                     }
                                     if (!calcAttack && attackHit && LoSFound)
@@ -1031,7 +1148,7 @@ namespace Descent_2e_Co_Op
 											if (currentHeroClass.CurrentWeaponRect.Contains(mouse.X, mouse.Y) && !weaponPicked) {
                                                 addSurgeUsage(currentHeroClass.CurrentWeapon, heroSheets[heroNumPosition], heroTokens[heroNumPosition]);
 												attackRange = currentHeroClass.MainAttackRange;
-                                                weaponPicked = true; weaponUsed = "main"; loadOnce = false; attackingWeapon = currentHeroClass.CurrentWeapon;
+                                                weaponPicked = true; weaponUsed = "main"; loadedOnce = false; attackingWeapon = currentHeroClass.CurrentWeapon;
 												messages.Clear();
                                             }
                                             #endregion
@@ -1039,13 +1156,13 @@ namespace Descent_2e_Co_Op
 											if (currentHeroClass.OffHandRect.Contains(mouse.X, mouse.Y) && !weaponPicked && (currentHeroClass.OffHand.Type == "melee" || currentHeroClass.OffHand.Type == "range")){
                                                 addSurgeUsage(currentHeroClass.OffHand, heroSheets[heroNumPosition], heroTokens[heroNumPosition]);
 												attackRange = currentHeroClass.OffAttackRange;
-                                                weaponPicked = true; weaponUsed = "off"; loadOnce = false; messages.Clear(); attackingWeapon = currentHeroClass.OffHand;
+                                                weaponPicked = true; weaponUsed = "off"; loadedOnce = false; messages.Clear(); attackingWeapon = currentHeroClass.OffHand;
                                             }
                                             #endregion
                                             #region Checks for end button click
                                             if (endToken.DrawRectangle.Contains(mouse.X, mouse.Y))
                                             {
-                                                weaponPicked = false; loadOnce = false; calcAttack = true; attackHit = true; hasSurges = false; loadSurgeOnce = false; LoSFound = false;
+                                                weaponPicked = false; loadedOnce = false; calcAttack = true; attackHit = true; hasSurges = false; loadSurgeOnce = false; LoSFound = false;
                                                 ClearDiceRolls(); removeSurgeNumber = -1;
                                                 messages.Clear(); floorHighlights.Clear();
                                                 thisHeroSheet.ActionPoints--;
@@ -1170,7 +1287,7 @@ namespace Descent_2e_Co_Op
 								case HeroActionState.SearchAction:
 									int searchRange = thisHeroSheet.SearchRange;
                                     if (!weaponPicked) { messages.Add(new Message("Select a search token within range.", windlassFont23, centerWindowMessage)); }
-									if (!loadOnce) { DetermineRanges(searchRange, archetype, tokenPosition, "Search"); loadOnce = true; }
+									if (!loadedOnce) { DetermineRanges(searchRange, archetype, tokenPosition, "Search"); loadedOnce = true; }
 									int searchCoinIndex = 0;
 									if (mouse.LeftButton == ButtonState.Pressed && leftButtonReleased) { leftClickStarted = true; leftButtonReleased = false; }
 									else if (mouse.LeftButton == ButtonState.Released)
@@ -1206,7 +1323,7 @@ namespace Descent_2e_Co_Op
 											{
 												if (displayedCard.DrawRectangle.Contains(mouse.X, mouse.Y))
 												{
-                                                    weaponPicked = false; displayedCard.Active = false; searchTokenClicked = false; loadOnce = false;
+                                                    weaponPicked = false; displayedCard.Active = false; searchTokenClicked = false; loadedOnce = false;
 													messages.Clear();
                                                     searchTokens.RemoveAt(searchCoinIndex);
                                                     thisHeroSheet.ActionPoints--;
@@ -1221,7 +1338,7 @@ namespace Descent_2e_Co_Op
 								case HeroActionState.MoveAction:
                                     int movementPoints = heroTokens[heroNumPosition].Movement;
                                     if (movementPoints == 0) { movementButtons[0].Active = false; movementButtons[1].Active = false; zeroMovementPoints = true; }
-                                    if (!loadOnce) { DetermineRanges(movementPoints, archetype, tokenPosition, "Move"); loadOnce = true; }
+                                    if (!loadedOnce) { DetermineRanges(movementPoints, archetype, tokenPosition, "Move"); loadedOnce = true; }
                                     if (mouse.LeftButton == ButtonState.Pressed && leftButtonReleased) { leftClickStarted = true; leftButtonReleased = false; }
                                     else if (mouse.LeftButton == ButtonState.Released)
                                     {
@@ -1258,7 +1375,7 @@ namespace Descent_2e_Co_Op
                                                         //currentHeroToken.OriginalLocation = currentHeroToken.Location;
                                                         //currentHeroToken.OriginalDrawRect = currentHeroToken.DrawRectangle;
                                                         choosingAction = true;
-                                                        loadOnce = false;
+                                                        loadedOnce = false;
                                                         foreach (Tile tile in tiles) if (currentHeroToken.DrawRectangle.Intersects(tile.DrawRectangle)) currentHeroToken.adjustPosition(tile.DrawRectangle);
                                                         foreach (Tile endCap in endCaps) if (currentHeroToken.DrawRectangle.Intersects(endCap.DrawRectangle)) currentHeroToken.adjustPosition(endCap.DrawRectangle);
                                                         currentHeroToken.Movement -= currentHeroToken.MovementUsed;
@@ -1270,7 +1387,7 @@ namespace Descent_2e_Co_Op
                                                         floorHighlights.Clear();
                                                         //currentHeroToken.OriginalLocation = currentHeroToken.Location;
                                                         //currentHeroToken.OriginalDrawRect = currentHeroToken.DrawRectangle; 
-                                                        loadOnce = false;
+                                                        loadedOnce = false;
                                                         foreach (Tile tile in tiles) if (currentHeroToken.DrawRectangle.Intersects(tile.DrawRectangle)) currentHeroToken.adjustPosition(tile.DrawRectangle);
                                                         foreach (Tile endCap in endCaps) if (currentHeroToken.DrawRectangle.Intersects(endCap.DrawRectangle)) currentHeroToken.adjustPosition(endCap.DrawRectangle);
                                                         if (movementPoints == 0) { movementButtons[0].Active = true; movementButtons[1].Active = true; zeroMovementPoints = false; }
@@ -1292,9 +1409,9 @@ namespace Descent_2e_Co_Op
                                     break;
                                 #region Rest Action
                                 case HeroActionState.RestAction:
-                                    if (!loadOnce)
+                                    if (!loadedOnce)
                                     {
-                                        thisHeroSheet.Resting = true; loadOnce = true;
+                                        thisHeroSheet.Resting = true; loadedOnce = true;
                                         thisHeroSheet.ActionPoints--;
                                         messages.Clear();
                                         messages.Add(new Message(thisHeroSheet.Name + " is resting this round", windlassFont23, centerWindowMessage));
@@ -1304,7 +1421,7 @@ namespace Descent_2e_Co_Op
                                 #endregion
                                 #region Stand Up Action
                                 case HeroActionState.StandUpAction:
-                                    if (!loadOnce)
+                                    if (!loadedOnce)
                                     {
                                         Dice hpDie1 = new Dice(1), hpDie2 = new Dice(1);
                                         int totalHPRecovered = 0, totalStaminaRecovered = 0;
@@ -1317,7 +1434,7 @@ namespace Descent_2e_Co_Op
                                         messages.Clear();
                                         messages.Add(new Message(thisHeroSheet.Name + " has recovered " + totalHPRecovered + " hit points & " + totalStaminaRecovered + " stamina", windlassFont23, centerWindowMessage));
                                         thisHeroSheet.ActionPoints -= 2;
-                                        loadOnce = true;
+                                        loadedOnce = true;
                                     }
                                     GeneralMouseClick(mouse);
                                     break;
@@ -1351,7 +1468,7 @@ namespace Descent_2e_Co_Op
                                             else if (currentHeroClass.ClassName == "berserker" && skillPicked)
                                             {
                                                 totalAttack += 1; changeHpStaminaBar(currentHeroToken, -1, heroNumPosition, "stamina"); skillUsed = -1; skillPicked = false;
-                                                currentHeroActionState = HeroActionState.AttackAction; messages.Clear(); loadOnce = true;
+                                                currentHeroActionState = HeroActionState.AttackAction; messages.Clear(); loadedOnce = true;
                                             }
                                             else if (currentHeroClass.ClassName == "knight" && skillPicked)
                                             {
@@ -1926,7 +2043,7 @@ namespace Descent_2e_Co_Op
                 {
                     leftClickStarted = false;
                     messages.Clear();
-                    if (loadOnce) loadOnce = false;
+                    if (loadedOnce) loadedOnce = false;
                     checkActionPoints(heroSheets[heroNumPosition]);
                 }
             }
@@ -2141,9 +2258,12 @@ namespace Descent_2e_Co_Op
                     lootTrackTokens.Add(new Token(lootTrack.DrawRectangle, lootTrackTokens.Count + 1, GameConstants.HP_TOKEN_START_X, yPosition + (GameConstants.HP_TOKEN_BUFFER_Y * lootTrackTokens.Count), hpTokenSource));
             if (lootTrackTokens.Count > 3)
             {
-                if (lootTrackTokens.Count >= 4 && numHeroesPlaying == 2) AwardShopCard(heroSheets[heroNumPosition]);
-                else if (lootTrackTokens.Count >= 5 && numHeroesPlaying == 3) AwardShopCard(heroSheets[heroNumPosition]);
-                else if (lootTrackTokens.Count >= 6 && numHeroesPlaying == 4) AwardShopCard(heroSheets[heroNumPosition]);
+                if (lootTrackTokens.Count >= 4 && numHeroesPlaying == 2 || lootTrackTokens.Count >= 5 && numHeroesPlaying == 3 || lootTrackTokens.Count >= 6 && numHeroesPlaying == 4)
+                {
+                    AwardShopCard(heroSheets[heroNumPosition]);
+                    lootTrackTokens.Clear();
+                    masterKillCount = 1;
+                }
             }
         }
 
@@ -2185,11 +2305,11 @@ namespace Descent_2e_Co_Op
             foreach (Tile endCap in endCaps) endCap.Draw(spriteBatch);
             foreach (Tile door in doors) door.Draw(spriteBatch);
             foreach (HeroSheet hSheet in heroSheets)
-                if (hSheet.ActiveSheet)
+                if (hSheet.ActiveSheet) // This section is where the hero card, class cards and any equipment are drawn
                 {
                     string theName = hSheet.Name;
-                    if (theName == "Avric" || theName == "Ashrian" || theName == "Leoric" || theName == "Tarha") { hSheet.Draw(spriteBatch, heroSheet1, classSheet1); }
-                    else hSheet.Draw(spriteBatch, heroSheet2, classSheet2);                    
+                    if (theName == "Avric" || theName == "Ashrian" || theName == "Leoric" || theName == "Tarha") { hSheet.Draw(spriteBatch, heroSheet1, classSheet1, shopSheet); }
+                    else hSheet.Draw(spriteBatch, heroSheet2, classSheet2, shopSheet);                    
                     bar1BG.Draw(spriteBatch, spriteSheet1); bar2BG.Draw(spriteBatch, spriteSheet1);
                     int numPos = heroTokens[heroNumPosition].Variable - 1;
                     hpBars[numPos].Draw(spriteBatch, spriteSheet1);
@@ -2232,19 +2352,44 @@ namespace Descent_2e_Co_Op
             }
             #endregion
 
+            #region Floor Highlights Section
+            if (currentGameState == GameState.HeroTurn && (currentHeroActionState == HeroActionState.SearchAction || currentHeroActionState == HeroActionState.AttackAction ||
+                         currentHeroActionState == HeroActionState.PerformArrowAbilitySkillAction || currentHeroState == HeroState.FamiliarActions && familiarChoosing)) 
+                foreach (Token floorLight in floorHighlights) if (floorLight.Active) floorLight.Draw(spriteBatch, spriteSheet1);
+            #endregion
+
+            #region Game Board Tokens: Heros, monsters, search, objectives
+            foreach (Token sToken in searchTokens) sToken.Draw(spriteBatch, spriteSheet1);
+            foreach (Token mToken in monsterTokens) mToken.Draw(spriteBatch, spriteSheet1);
+            foreach (Token hToken in heroTokens) if (currentGameState != GameState.CharacterCreation) hToken.Draw(spriteBatch, spriteSheet1);
+            #endregion
+
             #region Draw Hero Turn Items
             if (currentGameState == GameState.HeroTurn)
             {
                 if (!heroTokenClicked) foreach (Token drawToken in drawingTokens) if (drawToken.Active) drawToken.Draw(spriteBatch, spriteSheet1);
                 if (currentHeroState == HeroState.StartTurnAbility && familiarActive) foreach (Token yesNo in yesNoList) yesNo.Draw(spriteBatch, spriteSheet1);
-                if (heroTokenClicked && choosingAction)
+                if (currentHeroState == HeroState.EquipItems)
                 {
+                    #region Equip Action
+                    string theClass = heroSheets[heroNumPosition].PickedClass.ClassName;
+                    spriteBatch.Draw(creationBG, creationRec, Color.White);
+                    if (theClass == "disciple" || theClass == "spirit speaker" || theClass == "necromancer" || theClass == "runemaster") heroSheets[heroNumPosition].PickedClass.DrawFromBackPack(spriteBatch, classSheet1, shopSheet, creationRec);
+                    else heroSheets[heroNumPosition].PickedClass.DrawFromBackPack(spriteBatch, classSheet2, shopSheet, creationRec);
+                    endToken.Draw(spriteBatch, spriteSheet1);
+                    #endregion
+                }
+                if (heroTokenClicked && choosingAction && currentHeroState == HeroState.SelectActions)
+                {
+                    #region Choosing an Action
                     spriteBatch.Draw(actionChoiceSprite, actionChoiceRect, Color.White);
                     foreach (Token actionButton in actionButtons) actionButton.Draw(spriteBatch, spriteSheet1);
                     foreach (Message actionMessage in actionMessages) actionMessage.Draw(spriteBatch);
+                    #endregion
                 }
                 if (currentHeroState == HeroState.FamiliarActions)
                 {
+                    #region Famaliar Actions
                     if (familiarActionSheetOn)
                     {
                         spriteBatch.Draw(actionChoiceSprite, actionChoiceRect, Color.White);
@@ -2261,17 +2406,17 @@ namespace Descent_2e_Co_Op
                         foreach (Dice defDie in defenseDiceList) defDie.Draw(spriteBatch, 0, spriteSheet1);
                         endToken.Draw(spriteBatch, spriteSheet1);
                     }
+                    #endregion
                 }
 				if (currentHeroActionState == HeroActionState.MoveAction)
 				{
+                    #region Move Action
                     foreach (Token floorLight in floorHighlights) if (floorLight.Active) floorLight.Draw(spriteBatch, spriteSheet1);
                     if (heroMoving || zeroMovementPoints) foreach (Token moveButton in movementButtons) if (moveButton.Active) moveButton.Draw(spriteBatch, spriteSheet1);
-				}
-				else if (currentHeroActionState == HeroActionState.SearchAction || currentHeroActionState == HeroActionState.AttackAction ||
-                         currentHeroActionState == HeroActionState.PerformArrowAbilitySkillAction || currentHeroState == HeroState.FamiliarActions && familiarChoosing) {
-                             foreach (Token floorLight in floorHighlights) if (floorLight.Active) floorLight.Draw(spriteBatch, spriteSheet1); 
-                }
+                    #endregion
+				}                
 				if(currentHeroActionState == HeroActionState.AttackAction){
+                    #region Attack Action
                     for (int x = 0; x < 6; x++)
                     {
                         spriteBatch.Draw(spriteSheet1, new Rectangle(200 + (40 * x), 200, 32, 32), heroSheets[heroNumPosition].PickedClass.MainDie1.DiceSides[x], Color.White);
@@ -2290,6 +2435,7 @@ namespace Descent_2e_Co_Op
 						foreach (Token surge in surgeListRect) surge.Draw(spriteBatch, spriteSheet1);
 					}
                     endToken.Draw(spriteBatch, spriteSheet1);
+                    #endregion
 				}
                 if (currentHeroActionState == HeroActionState.RestAction)
                 {
@@ -2297,21 +2443,19 @@ namespace Descent_2e_Co_Op
                 }
                 if (currentHeroActionState == HeroActionState.StandUpAction && attackDiceList.Count > 0)
                 {
+                    #region Standup Action
                     attackDiceList[0].Draw(spriteBatch, 0, spriteSheet1);
                     attackDiceList[1].Draw(spriteBatch, 1, spriteSheet1);
+                    #endregion
                 }
                 if (currentHeroActionState == HeroActionState.PerformArrowAbilitySkillAction)
                 {
+                    #region Perform Arrow/Ability/Skill Action
                     foreach (Dice dieRoll in attackDiceList) dieRoll.Draw(spriteBatch, 0, spriteSheet1);
                     movementButtons[0].Draw(spriteBatch, spriteSheet1);
+                    #endregion
                 }
             }
-            #endregion
-
-            #region Game Board Tokens: Heros, monsters, search, objectives
-            foreach (Token sToken in searchTokens) sToken.Draw(spriteBatch, spriteSheet1);
-            foreach (Token mToken in monsterTokens) mToken.Draw(spriteBatch, spriteSheet1);
-            foreach (Token hToken in heroTokens) if (currentGameState != GameState.CharacterCreation) hToken.Draw(spriteBatch, spriteSheet1);
             #endregion
 
             #region Game Tracking Info: Overlord Track, Loot Track, Dice Rolls, Hero Sheets

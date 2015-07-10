@@ -286,10 +286,10 @@ namespace Descent_2e_Co_Op
         /// Draws the hero sheet
         /// </summary>
         /// <param name="spriteBatch">The sprite batch to use</param>
-        public void Draw(SpriteBatch spriteBatch, Texture2D spriteSheet, Texture2D classSheet)
+        public void Draw(SpriteBatch spriteBatch, Texture2D spriteSheet, Texture2D classSheet, Texture2D shopSheet)
         {
             spriteBatch.Draw(spriteSheet, drawRectangle, sourceRectangle, Color.White);
-            pickedClass.DrawSkillEquipment(spriteBatch, classSheet);
+            pickedClass.DrawSkillEquipment(spriteBatch, classSheet, shopSheet);
         }
 
         #endregion
